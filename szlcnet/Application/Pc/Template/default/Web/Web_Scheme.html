@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<include file="../Common/meta.html" />
+<link rel="stylesheet" href="{$OSS_URL}css/Scheme.css"/>
+<link rel="stylesheet" href="{$OSS_URL}css/Web.css"/>
+<include file="../Common/include.html"/>
+</head>
+
+<body class="backgroung1">
+<include file="../Common/header.html"/>
+<aside class="Banner_t" id="schemeWeb">
+  <div class="fixed_txt">
+    <h1>{$web_scheme.des.product_sort_name}</h1>
+    <h2>{$web_scheme.des.alias}</h2>
+    <span></span></div>
+</aside>
+<section class="Contain">
+  <article class="SinglePage">
+    <section class="Main Site_Brief">
+      <p style="font-size:1.333em;color:#555;text-indent:2em;"> {$web_scheme.des.product_sort_content}。 </p>
+    </section>
+    <div class="Site_btn Site_btn0"></div>
+    <div class="Site_btn Site_btn1"></div>
+    <div class="Site_btn Site_btn2"></div>
+    <div class="Site_btn Site_btn3"></div>
+    <div class="Site_btn Site_btn4"></div>
+    <div class="Site_btn Site_btn5"></div>
+    <section class="Site_Box Site_Box1 fast_nav_fixed" id="section1">
+      <section class="Main">
+        <div class="left"><span class="span" style=" margin-top:60px;"> <img src="{$OSS_URL}img/bg5.png"> <b>{$product.des.product_sort_name}</b> </span> </div>
+        <div class="right">
+          <div class="p">
+            <p>{$product.des.product_sort_content}</p>
+          </div>
+          <div class="img">
+            <div><img src="{$OSS_URL}img/pic6.png"></div>
+          </div>
+          <div class="down">
+            <ul>
+              <foreach name='$product.list' id='vo' key='k'>
+                <li><a href="{$vo.url}"> <span>{$vo.product_name}</span><img src="{$APP_URL}{$vo.product_spic}"> </a></li>
+              </foreach>
+            </ul>
+            <div class="Case"><b class="cn">典型案例</b> <b class="en">Typical cases</b></div>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </section>
+    </section>
+    <section class="Site_Box Site_Box2 fast_nav_fixed" id="section2">
+      <section class="Main">
+        <div class="left"><span class="span"> <b>{$brand.des.product_sort_name}</b> <img src="{$OSS_URL}img/bg6.png"> </span></div>
+        <div class="right">
+          <div class="p">{$brand.des.product_sort_content}</div>
+          <div class="img">
+            <div><img src="{$OSS_URL}img/pic7.png"></div>
+          </div>
+          <div class="down">
+            <ul>
+              <foreach name='$brand.list' id='vo' key='k'>
+                <li><a href="{$vo.url}"> <span>{$vo.product_name}</span><img src="{$APP_URL}{$vo.product_spic}"> </a></li>
+              </foreach>
+            </ul>
+            <div class="Case"><b class="cn">典型案例</b> <b class="en">Typical cases</b></div>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="Site_Box Site_Box3 fast_nav_fixed" id="section3">
+      <section class="Main">
+        <div class="left"><span class="span"> <img src="{$OSS_URL}img/bg7.png"> <b>{$enterprise.des.product_sort_name}</b> </span></div>
+        <div class="right">
+          <div class="p">{$enterprise.des.product_sort_content}</div>
+          <div class="clear"></div>
+          <div class="down">
+            <ul>
+              <foreach name='$enterprise.list' id='vo' key='k'>
+                <li><a href="{$vo.url}"> <span>{$vo.product_name}</span><img src="{$APP_URL}{$vo.product_spic}"> </a></li>
+              </foreach>
+            </ul>
+            <div class="Case"><b class="cn">典型案例</b> <b class="en">Typical cases</b></div>
+            <div class="clear"></div>
+          </div>
+          <div class="img">
+            <div><img src="{$OSS_URL}img/pic14.png"></div>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </section>
+    </section>
+    <section class="Site_Box Site_Box4 fast_nav_fixed" id="section4">
+      <section class="Main">
+        <div class="left"><span class="span"> <img src="{$OSS_URL}img/bg8.png"> <b>{$shop.des.product_sort_name}</b> </span></div>
+        <div class="right">
+          <div class="img">
+            <div><img src="{$OSS_URL}img/pic15.png"></div>
+          </div>
+          <div class="p" style=" padding-bottom:0px; height:200px;">{$shop.des.product_sort_content}</div>
+          <div class="down">
+            <ul>
+              <foreach name='$shop.list' id='vo' key='k'>
+                <li><a href="{$vo.url}"> <span>{$vo.product_name}</span><img src="{$APP_URL}{$vo.product_spic}"> </a></li>
+              </foreach>
+            </ul>
+            <div class="Case"><b class="cn">典型案例</b> <b class="en">Typical cases</b></div>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </section>
+    </section>
+    <section class="Site_Box Site_Box5 fast_nav_fixed" id="section5">
+      <section class="Main">
+        <div class="left"><span class="span" style="margin-top:25px;"> <b>{$info.des.product_sort_name}</b> <img src="{$OSS_URL}img/bg9.png"> </span></div>
+        <div class="right">
+          <div class="img">
+            <div><img src="{$OSS_URL}img/pic16.png"></div>
+          </div>
+          <div class="p"> {$info.des.product_sort_content} </div>
+          <div class="down">
+            <ul>
+              <foreach name='$info.list' id='vo' key='k'>
+                <li><a href="{$vo.url}"> <span>{$vo.product_name}</span><img src="{$APP_URL}{$vo.product_spic}"> </a></li>
+              </foreach>
+            </ul>
+            <div class="Case"><b class="cn">典型案例</b> <b class="en">Typical cases</b></div>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </section>
+    </section>
+    <section class="Site_Box Site_Box6 fast_nav_fixed" id="section6">
+      <section class="Main">
+        <div class="left"><span class="span"> <img src="{$OSS_URL}img/bg10.png"> <b>{$government.des.product_sort_name} </b> </span></div>
+        <div class="right">
+          <div class="p">{$government.des.product_sort_content} </div>
+          <div class="img">
+            <div><img src="{$OSS_URL}img/pic17.png"></div>
+          </div>
+          <div class="down">
+            <ul>
+              <foreach name='$government.list' id='vo' key='k'>
+                <li><a href="{$vo.url}"> <span>{$vo.product_name}</span><img src="{$APP_URL}{$vo.product_spic}"> </a></li>
+              </foreach>
+            </ul>
+            <div class="Case"><b class="cn">典型案例</b> <b class="en">Typical cases</b></div>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </article>
+</section>
+<div style="top: 772px;" class="fast_nav fast_nav2">
+  <ul>
+    <li class="first"><img src="{$OSS_URL}img/fast_nav_img7_03.png">
+      <div class="hover">
+        <div class="name"> 产品(服务)查询展示型</div>
+        <img src="{$OSS_URL}img/fast_nav_img7_03.png"></div>
+    </li>
+    <li><img src="{$OSS_URL}img/fast_nav_img8_03.png">
+      <div class="hover">
+        <div class="name"> 品牌宣传型</div>
+        <img src="{$OSS_URL}img/fast_nav_img8_03.png"></div>
+    </li>
+    <li><img src="{$OSS_URL}img/fast_nav_img9_03.png">
+      <div class="hover">
+        <div class="name"> 企业商务和客户服务</div>
+        <img src="{$OSS_URL}img/fast_nav_img9_03.png"></div>
+    </li>
+    <li><img src="{$OSS_URL}img/fast_nav_img10_03.png">
+      <div class="hover">
+        <div class="name"> 网上商城</div>
+        <img src="{$OSS_URL}img/fast_nav_img10_03.png"></div>
+    </li>
+    <li><img src="{$OSS_URL}img/fast_nav_img11_03.png">
+      <div class="hover">
+        <div class="name"> 企业信息门户官网</div>
+        <img src="{$OSS_URL}img/fast_nav_img11_03.png"></div>
+    </li>
+    <li class="last"><img src="{$OSS_URL}img/fast_nav_img12_03.png">
+      <div class="hover">
+        <div class="name"> 政府门户信息</div>
+        <img src="{$OSS_URL}img/fast_nav_img12_03.png"></div>
+    </li>
+  </ul>
+</div>
+<div style="display: block;" class="toTop"></div>
+<script type="text/javascript">
+    if (window.location.href.toString().toLowerCase().indexOf("index") > -1 || window.location.href.toString().toLowerCase() == "") {
+
+    } else {
+        $(".divFoot .links,.BottomLinks").hide();
+    }
+
+    //样式
+    $(".divFoot .links dl:last").css("margin-right", "0");
+    //快速导航
+    var fastheight = $(document).scrollTop();
+    $(".fast_nav").stop().animate({top: fastheight + $(window).height() / 2 - $(this).outerHeight(true) / 4}, 200);
+    $(window).scroll(function () {
+        var fastheight = $(document).scrollTop();
+        $(".fast_nav").stop().animate({top: fastheight + $(window).height() / 2 - $(this).outerHeight(true) / 4}, 200);
+    })
+    $(".fast_nav li").click(function () {
+        var index = $(this).index(), istop = $(".fast_nav_fixed").eq(index).offset().top;
+        $("html,body").stop().animate({scrollTop: istop}, 500);
+    })
+
+
+</script> 
+<script type="text/javascript">
+    //案例
+    $(".Contain .Site_Box").each(function () {
+        $(this).find(".down ul li").each(function () {
+            $(this).hover(function () {
+                $(this).find("span").show();
+            }, function () {
+                $(this).find("span").hide();
+            });
+        });
+    });
+
+    $(".Site_Box").each(function () {
+        $(this).find(".Site_Box").find(".down ul li:last").css("margin-left", "0");
+    });
+
+    $(".backgroung1 .Site_btn").click(function () {
+        var index = $(this).index() - 1,
+                isTop = $(".fast_nav_fixed").eq(index).offset().top;
+        $("html,body").stop().animate({scrollTop: isTop - 155}, 500);
+    })
+
+
+</script> 
+<include file="../Common/msg.html" /> <include file="../Common/footer1.html"/>
+</body>
+</html>

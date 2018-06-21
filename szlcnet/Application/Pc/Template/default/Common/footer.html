@@ -1,0 +1,87 @@
+<footer class="pingpu-bg" id="yy">
+    <div id="demo" class="footer container sx-padding">
+        <div style="visibility: visible; animation-name: fadeIn;" class="clearfix wow animated fadeIn animated">
+            <section>
+                <h3>在线留言 Online booking</h3>
+
+                <form action="/plus/diy.php" enctype="multipart/form-data" method="post" name="lansige"
+                      onsubmit="return CheckForm()">
+                    <input name="action" value="post" type="hidden">
+                    <input name="diyid" value="1" type="hidden">
+                    <input name="do" value="2" type="hidden">
+                    <ul class="list-unstyled">
+                        <li>
+                            <input name="xm" id="xm" value="您的尊称 Name" placeholder="您的尊称 Name" maxlength="10"
+                                   type="text">
+                        </li>
+                        <li>
+                            <input name="dh" id="dh" value="您的电话 Phone" placeholder="您的电话 Phone" maxlength="11"
+                                   type="text">
+                        </li>
+                        <li>
+              <textarea name="nr" cols="" id="nr" value="" placeholder="您要留言的内容 Content" maxlength="200"
+              ></textarea>
+                        </li>
+                        <input name="dede_fields" value="xm,text;dh,text;nr,multitext" type="hidden">
+                        <input name="dede_fieldshash" value="af9692c6aaa5752e3fce5a141f10a7c8" type="hidden">
+                        <li>
+                            <input name="button" id="button" value="立即提交 Submit →" type="0">
+                        </li>
+                    </ul>
+                </form>
+            </section>
+            <section class="bianju">
+                <h3>联系我们 Contact US</h3>
+                <address>
+                    <ul class="list-unstyled">
+                        <li>公司地址：{$web.web_address}</li>
+                        <li>联系电话：{$web.web_phone}</li>
+                        <li>传&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;真：{$web.web_fax}</li>
+                        <li>E-mail：{$web.web_email}</li>
+                    </ul>
+                </address>
+            </section>
+            <section>
+                <h3>内容搜索 Search</h3>
+
+                <form name="formsearch" action="/plus/search.php">
+                    <ul class="list-unstyled">
+                        <li>
+                            <input name="q" class="key" value="输入关键词 Keyword" placeholder="输入关键词 Keyword"
+                                   onfocus="if (value =='输入关键词 Keyword'){value =''}"
+                                   onblur="if (value ==''){value='输入关键词 Keyword'}" type="text">
+                            <input class="s-button" value="搜索" type="submit">
+                        </li>
+                    </ul>
+                </form>
+                <h4>快捷入口 Quick Entry</h4>
+
+                <p><a href="{$APP_URL}Marketing/Index">营销型网站</a> / <a href="{$APP_URL}News/Index">新闻资讯</a> / <a
+                        href="{$APP_URL}App/Index">移动开发</a> / <a href="{$APP_URL}Scheme/Index">创意策划</a> / <a
+                        href="{$APP_URL}Help/Index">帮助中心</a></p>
+
+                <p class="zhixun"><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=404377973&amp;site=qq&amp;menu=yes"
+                                     class="qq" target="_blank" title="在线QQ咨询"></a> <a
+                        href="http://wpa.qq.com/msgrd?v=3&amp;uin=404377973&amp;site=qq&amp;menu=yes" class="wx"
+                        target="_blank" title="在线QQ咨询"></a></p>
+            </section>
+        </div>
+        <div class="yq-link">
+            <hr>
+            <p><strong>友情链接：</strong> <a href="" target="_blank">艾天动力</a> |
+                <small>友链申请QQ：404377973</small>
+            </p>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="container clearfix">
+            <p class="copy pull-left">Copyright © 2015 创驰云网络 ALL RIGHTS RESERVED | <a href="http://www.miit.gov.cn/"
+                                                                                     target="_blank">粤ICP备15076249号-1</a>
+            </p>
+        </div>
+    </div>
+</footer>
+<div style="display: none;" class="toTop"></div>
+<div id="g3_brand_all" style="position: fixed;left:0;bottom:0"><script type="text/javascript" src="http://g3-zzz474.a.g4wei.com/dyb/ckflv/js/g3dyb.js?t=400-186-9596&m=1&f=1&u=6&p=1&s=0&c=0" charset="utf-8"></script></div>
+
+

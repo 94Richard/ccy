@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>案例分类列表</title>
+    <include file="../Common/Common_include.html"/>
+</head>
+
+<body>
+<div class="place"><span><i class="glyphicon glyphicon-th-list"></i>&nbsp;位置：</span>
+
+    <div class="pull-left">
+        <ul class="placeul">
+            <li><a href="javascript:;">案例分类</a></li>
+        </ul>
+    </div>
+    <div class="pull-right">
+        <a class="btn btn-primary insetBtn" href="{url f='add'}" type="button"><i class="fa fa-pencil"></i>&nbsp;&nbsp;新增</a>
+    </div>
+</div>
+
+<div class="wrap">
+    <form action="" method="post" id="form_data_list">
+        <table cellspacing="1" class="tablelist">
+            <thead>
+            <tr class="mylist_title">
+                <th><input type="checkbox" class="checkbox" id="InverSelect"/></th>
+                <th>分类名称</th>
+                <th>别名</th>
+                <th>排序</th>
+                <th>描述</th>
+                <th>操 作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <foreach name='$list' id='vo'>
+                <tr>
+                    <td><input name="id[]" type="checkbox" value="{$vo.product_id}" class="checkbox"/>
+                    <td class="editTd" data="{$vo.case_sort_id},case_sort_name,{url f='update' name='case_sort_id'},{$id},{$tableName}">{$vo.mark}{$vo.case_sort_name}</td>
+                    <td class="editTd" data="{$vo.case_sort_id},alias,{url f='update' name='case_sort_id'},{$id},{$tableName}">{$vo.alias}</td>
+                    <td class="editTd" data="{$vo.case_sort_id},case_sort_order,{url f='update' name='case_sort_id'},{$id},{$tableName}">{$vo.case_sort_order}</td>
+                    <td class="editTd" data="{$vo.case_sort_id},case_sort_content,{url f='update' name='case_sort_id'},{$id},{$tableName}">{$vo.case_sort_content}</td>
+                    <td align="center" class="action"><include file="../Common/Common_action.html"/>
+                    </td>
+                </tr>
+            </foreach>
+            </tbody>
+        </table>
+        <div class="mylist_foot">
+            <include file="../Common/Common_index_bottom.html"/>
+        </div>
+    </form>
+</div>
+<script language="javascript" type="text/javascript">
+    require(['./js/common.js'], function (common) {
+        require(['./js/public/list.js']);
+    });
+</script>
+</body>
+</html>

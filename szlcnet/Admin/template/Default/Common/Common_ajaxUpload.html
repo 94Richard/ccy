@@ -1,0 +1,20 @@
+<!--
+	delte-url:为删除的ajax URL路径
+    data-url: 为上传的AJax URL路径
+    data-img-url: 如果之前有上传过图片。则为上传的路径
+    data-dir: 为上传的文件目录
+    class='is_upload' 如果有上传过图片。则显示
+-->
+<link rel="stylesheet" href="./css/ajax_upload.css" type="text/css" />
+<div style="float:left; position:relative;">
+<div class="btn2" style="float:left;"> <span>添加附件</span> <input id="fileupload" type="file" name="{$file_name}" delte-url="{url f='ajax_delete_upload'}" data-url="{url f='ajax_upload'}" data-dir="{$upload_dir}"
+  <if condition="$img_url"> data-img-url='{$web_dir}{$img_url}'</if>
+  > </div>
+  <div class="is_upload"> <span class="sle_img show_upload_imgs">预览</span>
+    <div class="hide_upload_img t2"> <img   src="{$root_url}{$img_url}" onerror="this.src='{$root_url}{$defaultImg}';" > </div>
+    <span class="sle_img delimg">删除</span> </div>
+<div class="progress" style="float:left;"><span class="bar"></span><span class="percent">0%</span > </div>
+<span class="files"></span>
+<div id="showimg"></div>
+<input type="hidden" name="{$file_name}" value="{$img_url}" id="hide_file" />
+</div>

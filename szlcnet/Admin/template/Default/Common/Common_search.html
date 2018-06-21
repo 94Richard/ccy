@@ -1,0 +1,26 @@
+
+<!--
+公共搜索部分:
+	
+-->
+
+<div class="search">
+   
+     
+      品牌名称：
+      <select id="role" name="search_where[role_id][eq]">
+        <option value="">请选择</option>
+        <foreach name='$role' id='v'}
+      
+        <option value="{$v.id}" {if condition='$search_where.role_id.eq==$v.id'}selected="selected"{/if}>{$v.title}</option>
+        </foreach>
+      </select>
+      状态：
+      <select name="search_where[status][eq]">
+        
+     {:myselect('请选择,启用:1,锁定:0',$search_where.status.eq)}
+    
+      </select>
+      <input type="submit" class="btn_s" value="查 询" />
+    
+  </div>

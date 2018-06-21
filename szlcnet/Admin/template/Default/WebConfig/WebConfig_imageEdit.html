@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <include file="../Common/Common_include.html"/>
+</head>
+<body>
+
+<div class="place"><span><i class="glyphicon glyphicon-th-list"></i>&nbsp;位置：</span>
+
+    <div class="pull-left">
+        <ul class="placeul">
+            <li><a href="javascript:;">图像编辑 </a></li>
+        </ul>
+    </div>
+    <div class="pull-right">
+        <a class="btn btn-primary insetBtn" href="{url f='imageAdd' tip='image'}" type="button"><i
+                class="fa fa-pencil"></i>&nbsp;&nbsp;新增</a>
+    </div>
+</div>
+
+
+<div class="formbody">
+    <div class="clear"></div>
+    <include file="config_tab.html"/>
+    <div class="formtitle"><span>图像编辑</span></div>
+    <form method="post" action="{url f='imageUpdate' tab='image_setting'}" class="ajax_form">
+        <table cellspacing="1">
+            <tr>
+                <td>名称：</td>
+                <td><input name="title" placeholder="名称" value="{$vo.title}" class="form-control" type="text"></td>
+                <td><span class="msgInfo_input"><i>*</i>对图片设置的描述!</span></td>
+            </tr>
+            <tr>
+                <td>宽度：</td>
+                <td><input name="w" placeholder="请输入图片宽度" value="{$vo.w}" class="form-control" type="text"></td>
+                <td><span class="msgInfo_input"><i>*</i>宽度如果为0，则以高度为准，等比例缩放</span></td>
+            </tr>
+            <tr>
+                <td>高度：</td>
+                <td><input name="h" placeholder="请输入图片高度" value="{$vo.h}" class="form-control" type="text"></td>
+                <td><span class="msgInfo_input"><i>*</i>高度如果为0，则以宽度为准，等比例缩放</span></td>
+            </tr>
+            <tr>
+                <td>上传水印图片：</td>
+                <td>
+                    <include file="../Common/Common_ajaxUpload.html"/>
+                    <span class="msgInfo_input">水印可选</span>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>水印位置：</td>
+                <td>
+                    <select name="option" class="form-control">
+                        <option value="1"  <if condition="$vo.option==1">selected="selected"</if>>左上</option>
+                        <option value="2"  <if condition="$vo.option==2">selected="selected"</if>>左中</option>
+                        <option value="3"  <if condition="$vo.option==3">selected="selected"</if>>左右</option>
+                        <option value="4"  <if condition="$vo.option==4">selected="selected"</if>>中左</option>
+                        <option value="5"  <if condition="$vo.option==5">selected="selected"</if>>正居中</option>
+                        <option value="6"  <if condition="$vo.option==6">selected="selected"</if>>中右</option>
+                        <option value="7"  <if condition="$vo.option==7">selected="selected"</if>>下左</option>
+                        <option value="8"  <if condition="$vo.option==8">selected="selected"</if>>下中</option>
+                        <option value="9"  <if condition="$vo.option==9">selected="selected"</if>>下右</option>
+                        <option value="0"  <if condition="$vo.option==0">selected="selected"</if>>随机位置</option>
+                    </select>
+
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td> <include file="../Common/Common_lang.html"/>
+                    <input type="hidden" name="id" value="{$vo.id}"/><input type="hidden" name="name" value="id"/></td>
+                <td>
+                    <button type="button" class="btn btn-primary ajax_btn"
+                            data-url="{url f='imageSetting' tip='image'}">提交
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<script language="javascript" type="text/javascript">
+    var TAB = "{$configTab}";
+    require(['./js/common.js'], function (common) {
+        require(['./js/public/edit.js']);
+
+    });
+</script>
+</body>
+</html>

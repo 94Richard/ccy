@@ -1,0 +1,11 @@
+<div class="help_left">
+  <div class="center_c">
+    <div class="left">
+      <foreach name='$helpList' id='h' key='k'> <a href="{$APP_URL}{$h.url}" class="nav_a <if condition="$h.basic_id==$current_help_id">cur
+        </if>
+        ">
+        <p class="p{$k+1}"></p>
+        <em>{$h.basic_name}</em></a> </foreach>
+    </div>
+  </div>
+</div>

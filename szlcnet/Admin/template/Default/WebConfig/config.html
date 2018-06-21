@@ -1,0 +1,90 @@
+<form method="post" action="{url f='update'}" class="ajax_form configTable">
+  <table cellspacing="0">
+    <tr>
+      <td width="100">站点名称：</td>
+      <td><input name="web_title" placeholder="请输入站点名称" value="{$vo.web_title}"
+                       class="form-control"
+                       type="text"></td>
+    </tr>
+    <tr>
+      <td>公司名称：</td>
+      <td><input name="web_company" placeholder="请输入公司名称" class="form-control" type="text"
+                       value="{$vo.web_company}"></td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>站点关键字：</td>
+      <td><input name="web_keywords" placeholder="请输入站点关键字" value="{$vo.web_keywords}"
+                       class="form-control"
+                       type="text"></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>站点描述：</td>
+      <td><textarea name="web_description" class="form-control bootstrp_textarea" placeholder="请输入站点描述">{$vo.web_description}</textarea></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>前台Logo：</td>
+      <td><include file="../Common/Common_ajaxUpload.html"/></td>
+    </tr>
+    <tr>
+      <td>公司地址：</td>
+      <td><input name="web_address" placeholder="请输入公司地址" value="{$vo.web_address}"
+                       class="form-control"
+                       type="text"></td>
+    </tr>
+    <tr>
+      <td>客服电话：</td>
+      <td><input type="text" name="web_phone" size="6" value="{$vo.web_phone}"
+                       placeholder="请输入客服电话"
+                       class="form-control"/></td>
+    </tr>
+    <tr>
+      <td>400电话：</td>
+      <td><input type="text" name="tel_400" size="6" value="{$vo.tel_400}"
+                       placeholder="400电话"
+                       class="form-control"/></td>
+    </tr>
+    <tr>
+      <td>QQ：</td>
+      <td><input type="text" name="qq" size="6" value="{$vo.qq}"
+                       placeholder="QQ号码,多个请以|隔开"
+                       class="form-control"/></td>
+    </tr>
+    <tr>
+      <td>传真：</td>
+      <td><input type="text" name="web_fax" size="6" value="{$vo.web_fax}" placeholder="请输入传真"
+                       class="form-control"/></td>
+    </tr>
+    <tr>
+      <td>邮箱：</td>
+      <td><input type="text" name="web_email" size="6" value="{$vo.web_email}" placeholder="请输入邮箱"
+                       class="form-control"/></td>
+    </tr>
+    <tr>
+      <td>ICP备案证书号：</td>
+      <td><input type="text" name="web_copyright" size="6" value="{$vo.web_copyright}"
+                       placeholder="请输入ICP备案证书号" class="form-control"/></td>
+    </tr>
+    <tr style="display: none;">
+      <td>是否关闭网站：</td>
+      <td><select name="web_close" class="form-control">
+                {:myselect('打开:1,关闭站点:0',$vo.web_close)}
+        </select></td>
+    </tr>
+    <tr style="display: none;">
+      <td>推送客服代码：</td>
+      <td><textarea name="server_code" class="form-control bootstrp_textarea"
+                          placeholder="推送客服代码">{$vo.server_code}</textarea></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>&nbsp;
+        <input type="hidden" name="id" value="{$vo.id}" />
+        <input type="hidden" name="name" value="id" /></td>
+      <td><button type="button" class="btn btn-primary ajax_btn" data-url="{url f='index'}">提交 </button></td>
+      <td>&nbsp;</td>
+    </tr>
+  </table>
+</form>

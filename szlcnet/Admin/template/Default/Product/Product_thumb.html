@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>产品列表</title>
+    <include file="../Common/Common_include.html"/>
+</head>
+
+<body>
+<div class="place"><span><i class="glyphicon glyphicon-th-list"></i>&nbsp;位置：</span>
+
+    <div class="pull-left">
+        <ul class="placeul">
+            <li><a href="javascript:;">更新产品缩略图</a></li>
+        </ul>
+    </div>
+    <div class="pull-right"><a class="btn btn-primary insetBtn" href="{url f='add'}" type="button"><i
+            class="fa fa-pencil"></i>&nbsp;&nbsp;新增</a></div>
+</div>
+<div class="rightinfo">
+
+
+    <button id="test1" class="form-control">批量生成</button>
+    <div id="thumb_list">
+        <foreach name='$list' id='v' }
+        <div class="col-sm-2 col-md-2 center thumb_m"><a  data-url="{$root_url}{$v.img}"class="thumbnail showImg">
+            <i class="fa fa-cog fa-spin fa-3x"></i>
+            <img title="{$v.name}" src="{$root_url}{$v.img}" onerror="this.src='{$root_url}{$defaultImg}';"
+                 data-url="{$v.img}" data-id="{$v.id}" alt="{$v.name}">
+        </a>
+        </div>
+        </foreach>
+    </div>
+    <div class="panel-footer clear" style="margin-bottom: 30px; border: 0;">
+        <div class="pull-right">
+            <div class="pagin"> {$page}</div>
+        </div>
+    </div>
+
+</div>
+
+
+<script language="javascript" type="text/javascript">
+    var product_thumb = "product_thumb";
+    var url = "{url f='create_thumb'}";
+    var basicUlr = "{$root_url}";
+    require(['./js/common.js'], function (common) {
+        require(['./js/public/list.js']);
+        require(['./js/public/product.js']);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <include file="../Common/Common_include.html"/>
+</head>
+
+<body>
+
+<div class="place"><span><i class="glyphicon glyphicon-th-list"></i>&nbsp;位置：</span>
+
+    <div class="pull-left">
+        <ul class="placeul">
+            <li><a href="javascript:;">后台权限列表</a></li>
+        </ul>
+    </div>
+    <div class="pull-right">
+        <a class="btn btn-primary insetBtn" href="{url f='add'}" type="button"><i
+                class="fa fa-pencil"></i>&nbsp;&nbsp;新增</a>
+    </div>
+
+
+</div>
+
+
+<div class="search">
+    <form action="{url do='search'}" method="post">
+       <span style="display: inline; font-size:13px;">权限搜索:</span>
+        &nbsp;
+        <input type="text" name="search_where[title][like]" size="12" value="{$search_where.uname.like}"
+               class="form-control searchInput"/>
+        <input type="submit" class="btn btn-primary searchBtn" value="查 询"/>
+
+    </form>
+</div>
+
+<div class="rightinfo">
+    <form action="" method="post" id="form_data_list">
+        <table class="tablelist">
+            <thead>
+            <tr>
+                <th width="60"><input type="checkbox" class="checkbox" id="InverSelect"/></th>
+                <th>图标</th>
+                <th>权限名称</th>
+                <th>所属Action名称</th>
+                <th>所属Action方法</th>
+                <th>菜单名称</th>
+                <th>菜单地址</th>
+                <th>排序</th>
+                <th>状 态</th>
+                <th>操 作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <foreach name='$list' id='vo'>
+                <tr class="datalist">
+                    <td align="center"><input name="id[]" type="checkbox" value="{$vo.id}" class="itembox"/></td>
+                    <td><i class="top8 fa fa-{$vo.css_icon}"></i></td>
+                    <td style="font-weight:bold;"
+                        class="editTd" data="{$vo.id},title,{url f='update'},{$id},{$tableName}">{$vo.title}
+                    </td>
+                    <td class="editTd" data="{$vo.id},auth_action,{url f='update'},{$id},{$tableName}">
+                        {$vo.auth_action}
+                    </td>
+                    <td class="editTd" data="{$vo.id},auth_fun,{url f='update'},{$id},{$tableName}"> {$vo.auth_fun}</td>
+                    <td class="editTd" data="{$vo.id},menu_name,{url f='update'},{$id},{$tableName}"> {$vo.menu_name}</td>
+                    <td class="editTd" data="{$vo.id},menu_url,{url f='update'},{$id},{$tableName}"> {$vo.menu_url}</td>
+                    <td class="editTd" data="{$vo.id},orderid,{url f='update'},{$id},{$tableName}"> {$vo.orderid}</td>
+                    <td align="center">
+                        <include file="../Common/Common_status.html"/>
+                    </td>
+                    <td align="center" class="action">
+                        <include file="../Common/Common_action.html"/>
+                    </td>
+                </tr>
+                <foreach name='$vo._child' id='vo'>
+                    <tr class="datalist">
+                        <td align="center"><input name="id[]" type="checkbox" value="{$vo.id}" class="itembox"/></td>
+                        <td><i class="fa fa-{$vo.css_icon}"></i></td>
+                        <td dataType="require"
+                            class="editTd" data="{$vo.id},title,{url f='update'},{$id},{$tableName}"> {$vo.title}
+                        </td>
+                        <td class="editTd" data="{$vo.id},auth_action,{url f='update'},{$id},{$tableName}">
+                            {$vo.auth_action}
+                        </td>
+                        <td class="editTd" data="{$vo.id},auth_fun,{url f='update'},{$id},{$tableName}">
+                            {$vo.auth_fun}
+                        </td>
+                        <td class="editTd" data="{$vo.id},menu_name,{url f='update'},{$id},{$tableName}">
+                            {$vo.menu_name}
+                        </td>
+                        <td class="editTd" data="{$vo.id},'menu_url',{url f='update'},{$id},{$tableName}">
+                            {$vo.menu_url}
+                        </td>
+                        <td class="editTd" data="{$vo.id},orderid,{url f='update'},{$id},{$tableName}"> {$vo.orderid}
+                        </td>
+                        <td align="center">
+                            <include file="../Common/Common_status.html"/>
+                        </td>
+                        <td align="center" class="action">
+                            <include file="../Common/Common_action.html"/>
+                        </td>
+                    </tr>
+                </foreach>
+            </foreach>
+            </tbody>
+        </table>
+    </form>
+    <include file="../Common/Common_index_bottom.html"/>
+</div>
+<script language="javascript" type="text/javascript">
+    require(['./js/common.js'], function (common) {
+        require(['./js/public/list.js']);
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<?php if(!defined('APP_NAME')) exit();?>
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="keywords" content="创驰云网络科技">
+<meta name="description" content="创驰云网络科技">
+<meta name="author" content="创驰云网络科技">
+<title>创意策划_创驰云网络科技</title>
+<link rel="stylesheet" href="../Application/M/Template/default/css/mui.min.css">
+<link rel="stylesheet" type="text/css" href="../Application/M/Template/default/css/app.css" />
+<link rel="stylesheet" type="text/css" href="../Application/M/Template/default/css/style.css" />
+<script src="../Application/M/Template/default/js/mui.min.js"></script>
+</head>
+<body>
+
+<header class="header">
+	   <input type="text" placeholder="请输入查找内容" class="search">
+
+		<a id="menu" class="menu" href="#topPopover"></a>
+        <div id="topPopover" class="mui-popover">
+			<div class="mui-popover-arrow"></div>
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell"><a href="<?php echo $APP_URL;?>">首页</a>
+						</li>
+						<li class="mui-table-view-cell"><a href="<?php echo $APP_URL;?>About/index">关于我们</a>
+						</li>
+						<li class="mui-table-view-cell"><a href="<?php echo $APP_URL;?>News/index">新闻中心</a>
+						</li>
+						<li class="mui-table-view-cell"><a href="<?php echo $APP_URL;?>Scheme/Index">创意策划</a>
+						</li>
+						<li class="mui-table-view-cell"><a href="<?php echo $APP_URL;?>Case/index">经典案例</a>
+						</li>
+						<li class="mui-table-view-cell"><a href="<?php echo $APP_URL;?>About/contact">联系我们</a>
+						</li>						
+					</ul>
+				</div>
+			</div>
+
+		</div>
+</header>
+
+<div class="scheme-img"><img src="../Application/M/Template/default/images/scheme_banner.jpg"></div>
+
+<div class="creative">
+     <div class="plan">
+          <h3>网站策划</h3>
+          <h4>WEBSITE PLANNING</h4>
+          <p>企业网站的设计源于内容规划，企业做网站的内容取决于经营特点与市场分析，而网站建设的技术，则是实现内容和设计的最终保障，三者相互依存，缺一不可。 因此，在网站策划阶段，我们会首先研究企业经营管理特点、网站运营目标，分析企业终端客户及市场状况，然后规划网站的内容与功能，根据网站的内容与功能再决定采用什么样的设计。最后，要实现符合网站需求的内容、功能与设计，我们还会规划稳定安全的技术方案做保障。</p>
+     </div>
+</div>
+
+<div class="creative1">
+     <div class="plan">
+          <h3><img src="http://file.szlcnet.com/img/bg5.png">产品(服务) 查询展示型</h3>
+          <div class="plan-img"><img src="http://file.szlcnet.com/img/pic6.png"></div>
+          <p>本类网站核心目的是推广产品(服务)，是企业的产品“展示框”。利用网络的多媒体技术、数据库存储查询技术、三维展示技术、配合有效的图片和文字说明，将 企业的产品(服务)充分展现给新老客户，使客户能全方位的了解公司产品。与产品印刷资料相比，网站可以营造更加直观的氛围和产品的感染力，促使商家及消费 者对产品产生采购欲望，从而促进企业销售。我们通过18年经验积累，总结十八种网站展示产品(服务)的方法，在视觉冲击、体验互动的过程中，让消费者产生 购买欲望。</p>
+          <ul>
+              <li><img src="http://szlcnet.com/web_up_file/product_spic/20160627165906256.png"></li>
+              <li><img src="http://szlcnet.com/web_up_file/product_spic/20160627172553322.png"></li>
+              <li><img src="http://szlcnet.com/web_up_file/product_spic/20160627172614979.png"></li>
+              <li><img src="http://szlcnet.com/web_up_file/product_spic/20160627172739417.png"></li>
+          </ul>
+     </div>
+</div>
+
+<div class="creative">
+     <div class="plan">
+          <h3><img src="http://file.szlcnet.com/img/bg6.png">品牌宣传型</h3>
+          <div class="plan-img"><img src="http://file.szlcnet.com/img/pic7.png"></div>
+          <p>本类网站非常强调创意设计，但不同于一般的平面广告设计。网站利用多媒体交互技术、动态网页技术，配合广告设计、将企业品牌在互联网上发挥得淋漓尽致。本 类型网站着重展示企业CI、传播品牌文化、提高品牌知名度。对于产品品牌众多的企业，可以单独建立各个品牌的独立网站，以便市场营销策略与网站宣传统一。</p>
+          <ul>
+              <li><img src="http://szlcnet.com/web_up_file/product_spic/20160627165906256.png"></li>
+              <li><img src="http://szlcnet.com/web_up_file/product_spic/20160627172553322.png"></li>
+              <li><img src="http://szlcnet.com/web_up_file/product_spic/20160627172614979.png"></li>
+              <li><img src="http://szlcnet.com/web_up_file/product_spic/20160627172739417.png"></li>
+          </ul>
+     </div>
+</div>
+
+<div class="creative2">
+     <div class="plan">
+          <h3><img src="http://file.szlcnet.com/img/bg7.png">企业商务和客户服务</h3>
+          <div class="plan-img"><img src="http://file.szlcnet.com/img/pic14.png"></div>
+          <p>通过互联网对企业客户提供远程、及时、准确的服务，是本类网站的核心目标。本网站可实现渠道分销、终端客户销售、合作伙伴管理、网上采购、实时在线服务、 物流管理、售后服务管理等，它将更进一步的优化企业现有的服务体系，实现公司对分公司、经销商、售后服务商、消费者的有效管理，加速企业的信息流、资金 流、物流的运转效率，降低企业经营成本，为企业创造额外收益，降低企业经营成本。</p>
+          <ul>
+              <li><img src="http://szlcnet.com/web_up_file/product_spic/20160627172957815.png"></li>
+              <li><img src="http://szlcnet.com/web_up_file/product_spic/20160627173015183.png"></li>
+              <li><img src="http://szlcnet.com/web_up_file/product_spic/20160627173037551.png"></li>
+              <li><img src="http://szlcnet.com/web_up_file/product_spic/20160627173103431.png"></li>
+          </ul>
+     </div>
+</div>
+
+<div class="creative">
+     <div class="plan">
+          <h3><img src="http://file.szlcnet.com/img/bg8.png">网上商城</h3>
+          <div class="plan-img"><img src="http://file.szlcnet.com/img/pic15.png"></div>
+          <p>通过互联网对企业客户提供远程、及时、准确的服务，是本类网站的核心目标。本网站可实现渠道分销、终端客户销售、合作伙伴管理、网上采购、实时在线服务、 物流管理、售后服务管理等，它将更进一步的优化企业现有的服务体系，实现公司对分公司、经销商、售后服务商、消费者的有效管理，加速企业的信息流、资金 流、物流的运转效率，降低企业经营成本，为企业创造额外收益，降低企业经营成本。</p>
+          <ul>
+              <li><img src="http://szlcnet.com/web_up_file/product_spic/20160627173128373.png"></li>
+              <li><img src="http://szlcnet.com/web_up_file/product_spic/20160627174048798.png"></li>
+              <li><img src="http://szlcnet.com/web_up_file/product_spic/20160627174056573.png"></li>
+              <li><img src="http://szlcnet.com/web_up_file/product_spic/20160627174117666.png"></li>
+          </ul>
+     </div>
+</div>
+
+<div class="creative3">
+     <div class="plan">
+          <h3><img src="http://file.szlcnet.com/img/bg9.png">企业信息门户官网</h3>
+          <div class="plan-img"><img src="http://file.szlcnet.com/img/pic16.png"></div>
+          <p>通过互联网对企业客户提供远程、及时、准确的服务，是本类网站的核心目标。本网站可实现渠道分销、终端客户销售、合作伙伴管理、网上采购、实时在线服务、 物流管理、售后服务管理等，它将更进一步的优化企业现有的服务体系，实现公司对分公司、经销商、售后服务商、消费者的有效管理，加速企业的信息流、资金 流、物流的运转效率，降低企业经营成本，为企业创造额外收益，降低企业经营成本。</p>
+          <ul>
+              <li><img src="http://szlcnet.com/web_up_file/product_spic/20160627173249492.png"></li>
+              <li><img src="http://szlcnet.com/web_up_file/product_spic/20160627173345266.png"></li>
+              <li><img src="http://szlcnet.com/web_up_file/product_spic/20160627173411676.png"></li>
+              <li><img src="http://szlcnet.com/web_up_file/product_spic/20160627174528187.png"></li>
+          </ul>
+     </div>
+</div>
+
+<div class="creative">
+     <div class="plan">
+          <h3><img src="http://file.szlcnet.com/img/bg10.png">政府门户信息 </h3>
+          <div class="plan-img"><img src="http://file.szlcnet.com/img/pic17.png"></div>
+          <p>该类网站主要体现政务信息公开，促进政府管理职责到位，落实公务人员的岗位责任，树立为社会服务的良好形象，提供优质的社会公众信息方步及政民互动服务。 网站面向公众，提供管理职能介绍、办事指南、监督举报、政策法规、动态信息、行政业务受理及审批查询，可公开的宏观数据查询等。政府门户信息网站更新信息 及数据非常严肃，必须具备严格的信息管理流程及安全机制。 </p>
+     </div>
+</div>
+
+
+<div class="footer_text">技术支持 :  深圳市创驰云网络技术开发有限公司</div>
+
+
+
+<div class="footer">
+     <ul>
+         <li><a href="<?php echo $APP_URL;?>">
+             <span><img src="../Application/M/Template/default/images/footer_1.png"></span>
+             <em>网站首页</em></a>
+         </li>
+         <li><a href="tel:<?php echo $config['tel_400'];?>">
+             <span><img src="../Application/M/Template/default/images/footer_2.png"></span>
+             <em>一键拨号</em></a>
+         </li>
+         <li><a href="<?php echo $APP_URL;?>About/dh">
+             <span><img src="../Application/M/Template/default/images/footer_3.png"></span>
+             <em>一键导航</em></a>
+         </li>
+         <li><a href="<?php echo $APP_URL;?>About/contact">
+             <span><img src="../Application/M/Template/default/images/footer_4.png"></span>
+             <em>联系我们</em></a>
+         </li>
+     </ul>
+</div>
+</body>
+</html>

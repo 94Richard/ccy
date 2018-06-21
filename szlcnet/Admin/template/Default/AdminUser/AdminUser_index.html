@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>用户列表</title>
+<include file="../Common/Common_include.html" />
+</head>
+
+<body>
+
+
+<div class="place"><span><i class="glyphicon glyphicon-th-list"></i>&nbsp;位置：</span>
+    <div class="pull-left">
+        <ul class="placeul">
+            <li><a href="javascript:;">管理员列表 </a></li>
+        </ul>
+    </div>
+    <div class="pull-right">
+        <a class="btn btn-primary insetBtn" href="{url f='add'}" type="button"><i
+                class="fa fa-pencil"></i>&nbsp;&nbsp;新增</a>
+    </div>
+
+
+</div>
+
+<div class="wrap">
+  <div class="search">
+    <form action="{url do='search'}" method="post">
+      用户名：
+      <input type="text" name="search_where[uname][like]" size="12" value="{$search_where.uname.like}"  class="form-control searchInput" />
+      用户角色：
+      <select id="role" name="search_where[role_id][eq]" class="form-control selectSubmit">
+        <option value="">请选择</option>
+        <foreach name='$role' id='v'}
+        <option value="{$v.id}" {if condition='$search_where.role_id.eq==$v.id'}selected="selected"{/if}>{$v.title}</option>
+        </foreach>
+      </select>
+      <label class="form-control-static control-label"> 状态：</label>
+      <select name="search_where[status][eq]"  class="form-control selectSubmit">
+        {:myselect('请选择,启用:1,锁定:0',$search_where.status.eq)}
+      </select>
+      <input type="submit" class="btn btn-primary searchBtn" value="查 询" />
+    </form>
+  </div>
+
+  <form action="" method="post" id="form_data_list">
+    <table class="tablelist">
+      <thead>
+        <tr>
+          <th width="60"><input type="checkbox" class="checkbox" id="InverSelect"/></th>
+          <th>用户名</th>
+          <th>用户角色</th>
+          <th>描述说明</th>
+          <th>状 态</th>
+          <th>操 作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <foreach name='$list' id='vo'>
+          <tr class="datalist">
+            <td align="center"><input name="id[]" type="checkbox" value="{$vo.id}" class="checkbox" /></td>
+            <td>{$vo.uname}</td>
+            <td onclick="selectEdit({$vo.id},'role_id','{url f='update'}',this,'role');">{$role_name[$vo.role_id]}</td>
+            <td onclick="editNow({$vo.id},'description','{url f='update'}',this);">{$vo.description}</td>
+            <td align="center"><include file="../Common/Common_status.html" /></td>
+            <td align="center" class="action">
+                <a class="btn btn-default btn-xs" href="{url f='auth' user_id='$vo.id'}" title="授权"><i class="fa fa-cog fa-fw"></i>授权</a>
+                <include file="../Common/Common_action.html"/>
+
+            </td>
+          </tr>
+        </foreach>
+      </tbody>
+    </table>
+  </form>
+  <include file="../Common/Common_index_bottom.html"/> </div>
+<script language="javascript" type="text/javascript">
+    require(['./js/common.js'], function (common) {
+        require(['./js/public/list.js']);
+    });
+</script>
+</div>
+</body>
+</html>

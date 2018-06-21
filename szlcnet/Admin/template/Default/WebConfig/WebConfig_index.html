@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <include file="../Common/Common_include.html"/>
+</head>
+
+<body>
+<div class="place"><span><i class="glyphicon glyphicon-th-list"></i>&nbsp;位置：</span>
+
+    <div class="pull-left">
+        <ul class="placeul">
+            <li><a href="javascript:;">网站基本设置</a></li>
+        </ul>
+    </div>
+</div>
+<div class="wrap">
+    <div class='container-fluid top8'>
+        <div class="clear"></div>
+        <include file="config_tab.html"/>
+        <div class='tab-content' id="tab-content">
+            <include file="config.html"/>
+        </div>
+    </div>
+</div>
+<script language="javascript" type="text/javascript">
+    var TAB="{$configTab}";
+    require(['./js/common.js'], function (common) {
+        require(['./js/webConfig/webConfig.js']);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>无标题文档</title>
+<include file="../Common/Common_include.html"/>
+</head>
+
+<body style="background:url(./images/topbg.gif) repeat-x;">
+<div class="topleft"> <a href="{url a='Home' f='index'}" target="_parent"><img src="./images/logo.png" title="系统首页"/></a> </div>
+<ul class="nav2">
+  <li><a href="{url a='Home' f='index'}" target="_parent" class="selected"><img src="./images/icon01.png" title="工作台"/>
+    <h2>首页</h2>
+    </a></li>
+  <li><a href="index.php?a=AdminUser" target="rightFrame"><img src="./images/icon02.png" title="模型管理"/>
+    <h2>用户管理</h2>
+    </a></li>
+  <li><a href="index.php?a=AdminAuth" target="rightFrame"><img src="./images/icon03.png" title="模块设计"/>
+    <h2>权限列表</h2>
+    </a></li>
+  <li><a href="index.php?a=WebConfig&dir=1" target="rightFrame"><img src="./images/icon06.png" title="系统设置"/>
+    <h2>网站设置</h2>
+    </a></li>
+</ul>
+<div class="topright">
+  <ul>
+    <li style="margin-top:-20px;">
+      <div class="user" style="display:inline-block;"> <span><?php echo $_SESSION[SESSION_NAME]['uname'];?></span>&nbsp;&nbsp;&nbsp;&nbsp; </div>
+    </li>
+    <li><a target="_blank" href="{$root_url}">返回前台</a></li>
+    <li id="language_li">
+    <p id="languageP">{$LANG_TEXT}版&nbsp;&nbsp;<i class="fa fa-angle-down"></i></p>
+    <p id="lM" style="">
+     <foreach name='$languageList' id='vo'>
+     <span><a target="_ajax"   href="{url a='WebConfig' f='changeLang' id='$vo.id'}">{$vo.language}版</a>&nbsp;&nbsp;</span>
+     </foreach>
+     </p>
+      </li>
+    <li><a href="{url a='User' f='logout'}" target="_parent">退出</a></li>
+  </ul>
+</div>
+
+<script language="javascript" type="text/javascript">
+  require(['./js/common.js'], function (common) {
+	   require(['./js/public/top.js']);
+  });
+</script>
+</body>
+</html>

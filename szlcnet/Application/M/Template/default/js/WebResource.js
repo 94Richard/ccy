@@ -1,0 +1,9 @@
+$(function(){
+	$("a.btn_ajx").bind("click",function(){
+		$("#defaultModal").show();
+	});
+	$(".close").click(function(){
+		$(".modal").css("display","none");
+		$("#faqdiv").css("display","none");
+	});
+});

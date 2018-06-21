@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <include file="../Common/Common_include.html"/>
+</head>
+
+<body style="background:#f0f9fd;">
+<div class="lefttop"><span></span>通讯录</div>
+
+<dl class="leftmenu">
+    <foreach name="$menu" id="parent">
+        <dd>
+            <div class="title"><span>
+            <i class="fa fa-{$parent.css_icon}"></i>
+            </span>{$icon[$parent[id]]}</i>
+                {$parent.menu_name}
+            </div>
+            <ul class="menuson">
+                <foreach name='$parent._child' id='child'>
+                    <li><cite></cite><a target="rightFrame" href="{~U($child.menu_url)}">{$child.menu_name}</a><i></i>
+                    </li>
+                </foreach>
+            </ul>
+        </dd>
+    </foreach>
+</dl>
+
+<script language="javascript" type="text/javascript">
+    require(['./js/common.js'], function (common) {
+        require(['./js/public/leftMenu.js']);
+    });
+</script>
+</body>
+</html>

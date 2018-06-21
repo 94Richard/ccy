@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<include file="../Common/meta.html" />
+<include file="../Common/include.html"/>
+<link rel="stylesheet" href="{$OSS_URL}css/Case.css"/>
+<link rel="stylesheet" type="text/css" href="{$OSS_URL}css/component.css"/>
+<script src="{$OSS_URL}js/Case.js" type="text/javascript"></script>
+</head>
+<body>
+<include file="../Common/header.html"/>
+<div class="detail_banner case_ban">
+  <div class="twinkling"></div>
+</div>
+<!--分类浏览-->
+<div class="borwser_model">
+  <div class="tm_s">
+    <h2>分类浏览<span>classification</span></h2>
+    <p class="bor_catgory">
+      <foreach name='$case_Catgory' id='vo'> <a title="{$vo.case_sort_name}" href="{$APP_URL}Case/Index/catgoty/{$vo.alias}{$SUFFIX}">{$vo.case_sort_name}</a> </foreach>
+    </p>
+  </div>
+</div>
+<section id="grid-wrap" class="grid-wrap">
+  <ul class="grid swipe-down" id="grid" style=" display:block; margin:0 auto;">
+    <foreach name='$list' id='vo'>
+      <li><a href="{$APP_URL}Case/detail/id/{$vo.case_id}.html"><img src="{$OSS_URL}{$vo.case_spic[0]}" alt="{$vo.case_name}">
+        <h3>{$vo.case_name}</h3>
+        </a></li>
+    </foreach>
+  </ul>
+</section>
+<div class="pagin"> {$page}</div>
+<script src="{$OSS_URL}js/waterfall/modernizr.custom.js"></script> 
+<script src="{$OSS_URL}js/waterfall/masonry.pkgd.min.js"></script> 
+<script src="{$OSS_URL}js/waterfall/imagesloaded.pkgd.min.js"></script> 
+<script src="{$OSS_URL}js/waterfall/classie.js"></script> 
+<script src="{$OSS_URL}js/waterfall/colorfinder-1.1.js"></script> 
+<script src="{$OSS_URL}js/waterfall/gridScrollFx.js"></script> 
+<script>
+
+
+</script> 
+<include file="../Common/footer1.html"/>
+</body>
+</html>

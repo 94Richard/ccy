@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<include file="../Common/meta.html" />
+<include file="../Common/include.html" />
+<link rel="stylesheet" href="{$OSS_URL}css/Domain.css"/>
+<link rel="stylesheet" href="{$OSS_URL}css/Help.css"/>
+<link rel="stylesheet" href="{$OSS_URL}css/About.css"/>
+
+</head>
+<body>
+<include file="../Common/header.html" />
+
+<div  id="helpBg"> </div>
+<div class="qing abo-gy">
+  <div class="abo-gy-ti0">
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <td>
+           <foreach name='$helpList' id='help'>
+    <a href="{$APP_URL}{$help.url}" <if condition="$help.basic_id==$current_about_id">class="abonn"<else>class="abott1"</if>><span class="abott1">{$help.basic_name}</span><span class="abott2">{$help.basic_name}</span></a>
+           </foreach>
+           <a href="{$APP_URL}About/Payment"><span class="abott1">付款方式</span><span class="abott2">付款方式</span></a>
+         </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</div>
+
+<div id="doMain_Model">
+  <p class="domo_p_line"><img src="{$OSS_URL}img/hunuo_29.jpg"></p>
+  <p>域名注册品类繁多，不能通过下面实时查询注册的，请联系我们客服手工查询及注册。 </p>
+  <img src="{$OSS_URL}img/hunuo_19.jpg">
+  <p class="line1 top30"></p>
+  <div class="domain_bg m_wrap3">
+    <form class="m_search" target="_blank" method="Get" action="?">
+      <input id="domain" placeholder="请输入您要查询的域名" class="text domain" type="text" name="domain" value="">
+      <input class="submit" type="button" id="searchDomain" value="点击查询">
+      <div class="clear"> </div>
+      <img src="{$OSS_URL}img/hunuo_20.jpg" id="dq" />
+    </form>
+    <div style="height:40px;"> </div>
+    <table class="table" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <td colspan="4" class="top"> 国际通用顶级域名海外注册 </td>
+        </tr>
+        <tr>
+          <td colspan="4" style="height:10px;"><br></td>
+        </tr>
+        <tr>
+          <td class="bg1 b1 b2"> 域名后缀 </td>
+          <td class="b1 b2"> 描述 </td>
+          <td class="b1 b2"> 价格/年 </td>
+          <td class="b1 b2 b3"> 说明 </td>
+        </tr>
+        <tr>
+          <td class="bg1 b1"> .COM/.NET/.ORG(中国注册) </td>
+          <td class="b1"><span>国际域名商业(公司/网络/组织)</span></td>
+          <td class="b1"><span>80元/年</span></td>
+          <td class="b1 b3"><a href="#"><img src="{$OSS_URL}img/hunuo_23.jpg"></a><img src="{$OSS_URL}img/hunuo_24.jpg"></td>
+        </tr>
+        <tr>
+          <td class="bg1 b1"> .COM/.NET/.ORG(海外注册) </td>
+          <td class="b1"><span>通过美国注册(公司/网络/组织)</span></td>
+          <td class="b1"><span>150元/年</span></td>
+          <td class="b1 b3"><a href="#"><img src="{$OSS_URL}img/hunuo_23.jpg"></a><img src="{$OSS_URL}img/hunuo_24.jpg"></td>
+        </tr>
+        <tr>
+          <td class="bg1 b1"> .cn/.com.cn/.net.cn<br>
+            /.org.cn/.gov.cn </td>
+          <td class="b1"><span>中国英文域名</span></td>
+          <td class="b1"><span>80元/年</span></td>
+          <td class="b1 b3"><a href="#"><img src="{$OSS_URL}img/hunuo_23.jpg"></a><img src="{$OSS_URL}img/hunuo_24.jpg"></td>
+        </tr>
+        <tr>
+          <td class="bg1 b1"> .中国(cn)/.公司/.网络 </td>
+          <td class="b1"><span>中文通用域名</span></td>
+          <td class="b1"><span>280元/年</span></td>
+          <td class="b1 b3"><a href="#"><img src="{$OSS_URL}img/hunuo_23.jpg"></a><img src="{$OSS_URL}img/hunuo_24.jpg"></td>
+        </tr>
+        <tr>
+          <td class="bg1 b1"> 世纪主机.com/.net </td>
+          <td class="b1"><span>国际中文域名</span></td>
+          <td class="b1"><span>280元/年</span></td>
+          <td class="b1 b3"><a href="#"><img src="{$OSS_URL}img/hunuo_23.jpg"></a><img src="{$OSS_URL}img/hunuo_24.jpg"></td>
+        </tr>
+        <tr>
+          <td class="bg1 b1"> .CC </td>
+          <td class="b1"><span>商业公司域名</span></td>
+          <td class="b1"><span>350元/年</span></td>
+          <td class="b1 b3"><a href="#"><img src="{$OSS_URL}img/hunuo_23.jpg"></a><img src="{$OSS_URL}img/hunuo_24.jpg"></td>
+        </tr>
+        <tr>
+          <td class="bg1 b1"> .BIZ </td>
+          <td class="b1"><span>商业领域域名</span></td>
+          <td class="b1"><span>180元/年</span></td>
+          <td class="b1 b3"><a href="#"><img src="{$OSS_URL}img/hunuo_23.jpg"></a><img src="{$OSS_URL}img/hunuo_24.jpg"></td>
+        </tr>
+        <tr>
+          <td class="bg1 b1"> .INFO </td>
+          <td class="b1"><span>商业/信息领域域名</span></td>
+          <td class="b1"><span>180元/年</span></td>
+          <td class="b1 b3"><a href="#"><img src="{$OSS_URL}img/hunuo_23.jpg"></a><img src="{$OSS_URL}img/hunuo_24.jpg"></td>
+        </tr>
+        <tr>
+          <td class="bg1 b1"> .MOBI </td>
+          <td class="b1"><span>手机的专属全球顶级域名</span></td>
+          <td class="b1"><span>398元/2年</span></td>
+          <td class="b1 b3"><a href="#"><img src="{$OSS_URL}img/hunuo_23.jpg"></a><img src="{$OSS_URL}img/hunuo_24.jpg"></td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="height:65px;"> </div>
+  </div>
+  <p class="line1"></p>
+</div>
+
+<script type="text/javascript">var  json_url="{$APP_URL}Help/searchDomain/";</script>
+<script src="{$OSS_URL}js/Domain.js" type="text/javascript"></script>
+
+<include file="../Common/footer1.html"/>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>产品列表</title>
+    <include file="../Common/Common_include.html"/>
+</head>
+
+<body>
+<div class="place"><span><i class="glyphicon glyphicon-th-list"></i>&nbsp;位置：</span>
+
+    <div class="pull-left">
+        <ul class="placeul">
+            <li><a href="javascript:;">产品列表</a></li>
+        </ul>
+    </div>
+    <div class="pull-right">
+        <a class="btn btn-primary insetBtn" href="{url f='add'}" type="button"><i class="fa fa-pencil"></i>&nbsp;&nbsp;新增</a>
+    </div>
+</div>
+
+<div class="rightinfo">
+    <div class="search">
+        <form action="{url do='search'}" method="post">
+            <select id="role" name="search_where[product_one_id][eq]" class="form-control selectSubmit">
+                <option value="0">--请选择--</option>
+                <foreach name='$parent_list' id='v' }
+                <option value="{$v.product_sort_id}"
+                <if condition="$search_where.product_one_id.eq==$v.product_sort_id">selected="selected"</if>
+                >{$v.product_sort_name}
+                </option>
+                </foreach>
+            </select>
+            &nbsp;
+            <input type="text" name="search_where[product_name][like]" size="12" value="{$search_where.uname.like}"
+                   class="form-control searchInput"/>
+            <input type="submit" class="btn btn-primary searchBtn" value="查 询"/>
+            <a target="_ajax" href="{url f='clear_thumb'}" confirm="确认删除？删除后不可恢复！"
+               class="btn btn-primary flaot_right searchBtn inline_block left10">清空缓存图片</a>
+            <a href="{url f='thumb'}" class="btn btn-primary flaot_right searchBtn inline_block">生成产品缩略图</a>
+
+        </form>
+    </div>
+
+
+    <form action="" method="post" id="form_data_list">
+        <table cellspacing="1" class="tablelist">
+            <thead>
+            <tr class="mylist_title">
+                <th width="60"><input type="checkbox" class="checkbox" id="InverSelect"/></th>
+                <th width="108">产品图片</th>
+                <th width="288">产品名称</th>
+                <th width="208">所属分类</th>
+                <th>排序</th>
+                <th>推荐</th>
+                <th width="432">发布时间</th>
+                <th width="168">操 作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <foreach name='$list' id='vo'>
+                <tr>
+                    <td><input name="id[]" type="checkbox" value="{$vo.product_id}" class="checkbox"/>
+                    </td>
+                    <td>
+                        <a href="../{$vo.product_spic}" target="_blank"><img class="proImg"
+                                                                             onerror="this.src='{$root_url}{$defaultImg}';"
+                                                                             src="../{$vo.product_spic}"/></a>
+                    </td>
+                    <td class="editTd"
+                        data="{$vo.product_id},product_name,{url f='update' name='product_id'},{$id},{$tableName}">
+                        {$vo.product_name}
+                    </td>
+
+                    <td>{$vo.parent}</td>
+                    <td class="editTd"
+                        data="{$vo.product_id},product_order,{url f='update' name='product_id'},{$id},{$tableName}">
+                        {$vo.product_order}
+                    </td>
+                    <td>
+                        <if condition="$vo.product_commend==1">是
+                            <else>
+                                否
+                        </if>
+                    </td>
+                    <td>{$vo.product_date}</td>
+                    <td>
+                        <include file="../Common/Common_action.html"/>
+                    </td>
+                </tr>
+            </foreach>
+            </tbody>
+        </table>
+        <div class="mylist_foot">
+            <include file="../Common/Common_index_bottom.html"/>
+        </div>
+    </form>
+</div>
+<script language="javascript" type="text/javascript">
+    require(['./js/common.js'], function (common) {
+        require(['./js/public/list.js']);
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<include file="../Common/meta.html" />
+<link rel="stylesheet" href="{$OSS_URL}css/Web.css"/>
+<include file="../Common/include.html" />
+</head>
+<body>
+<include file="../Common/header.html" />
+<section class="Contain" style=" padding-top:115px;">
+  <div data-height="445" style=" padding-bottom: 271.7px;" class="ServicesBox official_website_bg fast_nav_fixed">
+    <div class="Main">
+      <div class="divBox official_website wow bounceInLeft animated">
+        <div class="cont"> <br />
+          <a name="official_website"></a> <span class="title">{$website.des.product_sort_name}</span> <span class="brief">{$website.des.alias}</span>
+          <div class="p">{$website.des.product_sort_content}</div>
+        </div>
+        <span class="span_more"> <a target="_blank" href="{$APP_URL}Case/Index" name="official_website" class="see_more">查看更多案例</a> </span>
+        <div class="caselist">
+          <ul>
+            <foreach name='$website.list' id='vo' key='k'>
+              <li><a href="{$vo.url}"> <span style="display: none;">{$vo.product_name}</span><img src="{$APP_URL}{$vo.product_spic}" class="gray"> </a></li>
+            </foreach>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="img"> <img src="{$OSS_URL}img/official_website_img.png"> </div>
+  </div>
+  <a name="online_store" style="padding-top: 16px;">
+  <div data-height="514" style="padding-top: 138.6px; padding-bottom: 323.4px;" class="ServicesBox ServicesBox2 online_store_bg fast_nav_fixed">
+    <div class="Main" style="">
+      <div class="divBox online_store wow bounceInRight animated">
+        <div class="cont"> <span class="title">{$shop.des.product_sort_name}</span> <span class="brief">{$shop.des.alias}</span>
+          <div class="p">
+           {$shop.des.product_sort_content}
+          </div>
+        </div>
+        <span class="span_more"> <a href="{$APP_URL}Case/Index" style="float:right;" href="kehuanli" name="online_store_bg" class="see_more">查看更多案例</a> </span>
+        <div class="caselist" style="float:right; width:450px; border:1px solid #FFF; ">
+          <ul>
+           <foreach name='$shop.list' id='vo' key='k'>
+              <li><a href="{$vo.url}"> <span style="display: none;">{$vo.product_name}</span><img src="{$APP_URL}{$vo.product_spic}" class="gray"> </a></li>
+            </foreach>
+            
+          </ul>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  </a> <a name="Interactive_Marketing">
+  <div data-height="565" style="padding-top: 103.3px; padding-bottom: 287.7px;" class="ServicesBox Interactive_Marketing_bg fast_nav_fixed">
+    <div class="Main">
+      <div class="divBox Interactive_Marketing wow bounceInLeft animated">
+        <div class="cont"> <span class="title">{$marketing.des.product_sort_name}</span> <span class="brief">{$marketing.des.alias}</span>
+          <div class="p">{$marketing.des.product_sort_content}</div>
+        </div>
+        <span class="span_more"> <a href="{$APP_URL}Case/Index" href="kehuanli" class="see_more">查看更多案例</a> </span>
+        <div class="caselist">
+          <ul>
+            <foreach name='$marketing.list' id='vo' key='k'>
+              <li><a href="{$vo.url}"> <span style="display: none;">{$vo.product_name}</span><img src="{$APP_URL}{$vo.product_spic}" class="gray"> </a></li>
+            </foreach>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  </a>
+  <div data-height="452"  style="padding-bottom: 366.8px;" class="ServicesBox ServicesBox2 Brand_Website_bg fast_nav_fixed">
+    <div class="Main">
+      <div class="divBox Brand_Website wow bounceInRight animated" id="brand_m">
+        <div class="cont" style="margin-top:-35px;"> <a name="Brand_Website"></a> <span class="title">{$brand.des.product_sort_name}</span> <span class="brief">{$brand.des.alias}</span>
+          <div class="p">
+            <p>{$brand.des.product_sort_content}</p>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div data-height="476" style="padding-top: 150px; padding-bottom: 250px;" class="ServicesBox Industry_Portal_bg fast_nav_fixed">
+    <div class="Main">
+      <div class="divBox Industry_Portal wow bounceInLeft animated">
+        <div class="cont"> <a name="Industry_Portal"></a> <span class="title">{$industry.des.product_sort_name}</span> <span class="brief">{$industry.des.alias}</span>
+          <div class="p">
+            <p>{$industry.des.product_sort_content}</p>
+          </div>
+        </div>
+        <span class="span_more"> <a href="kehuanli" class="see_more">查看更多案例</a> </span>
+        <div class="caselist" style="margin-left:-100px;">
+          <ul>
+            <foreach name='$industry.list' id='vo' key='k'>
+              <li><a href="{$vo.url}"> <span style="display: none;">{$vo.product_name}</span><img src="{$APP_URL}{$vo.product_spic}" class="gray"> </a></li>
+            </foreach>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div data-height="500" style="padding-top: 142.8px; padding-bottom: 333.2px;" class="ServicesBox ServicesBox2 information_network_bg fast_nav_fixed">
+    <div class="Main">
+      <div class="divBox information_network wow bounceInRight animated">
+        <div class="cont"> <a name="information_network"></a> <span class="title">{$info.des.product_sort_name}</span> <span class="brief">{$industry.des.alias}</span>
+          <div class="p">
+            <p>{$info.des.product_sort_content}</p>
+          </div>
+        </div>
+        <span class="span_more"> <a href="kehuanli" class="see_more">查看更多案例</a> </span>
+        <div class="caselist">
+          <ul>
+           <foreach name='$info.list' id='vo' key='k'>
+              <li><a href="{$vo.url}"> <span style="display: none;">{$vo.product_name}</span><img src="{$APP_URL}{$vo.product_spic}" class="gray"> </a></li>
+            </foreach>
+          </ul>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div style="top: 244px;" class="fast_nav">
+    <ul>
+      <li class="first"> <img src="{$OSS_URL}img/fast_nav_img1_03.png">
+        <div class="hover">
+          <div class="name">官网建设</div>
+          <img src="{$OSS_URL}img/fast_nav_img1_03.png"> </div>
+      </li>
+      <li> <img src="{$OSS_URL}img/fast_nav_img2_03.png">
+        <div class="hover">
+          <div class="name">网上商城</div>
+          <img src="{$OSS_URL}img/fast_nav_img2_03.png"> </div>
+      </li>
+      <li> <img src="{$OSS_URL}img/fast_nav_img3_03.png">
+        <div class="hover">
+          <div class="name">互动营销</div>
+          <img src="{$OSS_URL}img/fast_nav_img3_03.png"> </div>
+      </li>
+      <li> <img src="{$OSS_URL}img/fast_nav_img4_03.png">
+        <div class="hover">
+          <div class="name">品牌型网站</div>
+          <img src="{$OSS_URL}img/fast_nav_img4_03.png"> </div>
+      </li>
+      <li> <img src="{$OSS_URL}img/fast_nav_img5_03.png">
+        <div class="hover">
+          <div class="name">行业门户</div>
+          <img src="{$OSS_URL}img/fast_nav_img5_03.png"> </div>
+      </li>
+      <li class="last"> <img src="{$OSS_URL}img/fast_nav_img6_03.png">
+        <div class="hover">
+          <div class="name">内外信息网</div>
+          <img src="{$OSS_URL}img/fast_nav_img6_03.png"> </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<script type="text/javascript">
+    //快速导航
+    var fastheight = $(document).scrollTop();
+    $(".fast_nav").stop().animate({ top: fastheight + $(window).height() / 2 - $(this).outerHeight(true) / 4 }, 200);
+    $(window).scroll(function () {
+        var fastheight = $(document).scrollTop();
+        $(".fast_nav").stop().animate({ top: fastheight + $(window).height() / 2 - $(this).outerHeight(true) / 4 }, 200);
+    })
+    $(".fast_nav li").click(function () {
+        var index = $(this).index(),
+            istop = $(".fast_nav_fixed").eq(index).offset().top;
+            if(index==0){
+              istop=0;
+            }else if(istop==3){
+              istop+=30;
+            }
+        $("html,body").stop().animate({ scrollTop: istop }, 500);
+    });
+	
+	$("div.caselist li").hover(function(){
+		$(this).find("span").show();
+	},function(){
+		$(this).find("span").hide();
+	})
+
+ 
+</script> 
+<include file="../Common/msg.html" /> <include file="../Common/footer1.html" />
+</body>
+</html>

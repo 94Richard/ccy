@@ -1,0 +1,8 @@
+<if condition="$select_option =='edit'"><a href="{url f='edit' id='$vo.url_id' name='$id' tab='$tab'}"
+                                           class="btn btn-default btn-xs">
+    <span class="glyphicon glyphicon-edit"></span>编辑</a>
+</if>
+
+    <a  <if condition="$option_del =='no'">style="display: none;" </if>  target="_ajax" href="{url f='delete' id='$vo.url_id' name='$id' tab='$tableName'}" class="btn btn-default btn-xs"
+       confirm="确认删除？删除后可进入回收站查找！" title="删除"><span class="glyphicon glyphicon-remove"></span>删除</a>
+

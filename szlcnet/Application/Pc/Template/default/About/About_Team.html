@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<include file="../Common/meta.html"/>
+<include file="../Common/include.html"/>
+<link rel="stylesheet" href="{$OSS_URL}css/About.css"/>
+<script type="text/javascript" src="{$OSS_URL}js/niceScroll.js"></script>
+</head>
+<body>
+<include file="../Common/header.html"/>
+<div id="contactUsBg"> 
+</div>
+
+<!--关于我们 -->
+<div class="qing abo-gy">
+  <div class="abo-gy-ti0">
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <td>
+           <foreach name='$aboutList' id='about'>
+    <a href="{$APP_URL}{$about.url}" <if condition="$about.basic_id==$current_about_id">class="abonn"<else>class="abott1"</if>><span class="abott1">{$about.basic_name}</span><span class="abott2">{$about.basic_name}</span></a>
+           </foreach>
+         </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="abo-gy-kk">
+    <table class=" abobg" border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tbody>
+        <tr>
+          <td rowspan="2"><div class="qing abk"><img src="{$OSS_URL}img/abo-k10.png" class="abk10" width="100%"><img src="{$OSS_URL}img/abo-k1.jpg" class="abk1" width="100%"></div></td>
+          <td><img src="{$OSS_URL}img/abo-k2.jpg" class="abotu" width="100%"></td>
+          <td style="position:relative;"><div class="gaishu">
+              <div class="gaishu2">
+                <div tabindex="5000" style="overflow: hidden;" id="sucai00">{$team.basic_content} </div>
+              </div>
+            </div></td>
+          <td><img src="{$OSS_URL}img/abo-k3.jpg" class="abotu" width="100%"></td>
+        </tr>
+        <tr>
+          <td><b>使命</b>
+            <p>客户至上，品质优先。为追求客户满意，一丝不苟，精益求精。</p></td>
+          <td><img src="{$OSS_URL}img/abo-k4.jpg" class="abotu" width="100%"></td>
+          <td><b>核心价值</b>
+            <p>结合客户的实际需求与我们的设计理念，力争把每个网站都做成精品。
+              选择最有价值的产品，选择最有诚意的服务！</p></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<!--8年时间 -->
+<div class="qing abo-8n">
+  <div class="qing abo-8nti"><br /><br /><br /><br /></div>
+  <div class="qing abo-8nk">
+    <div class="abo-8nkjs"><span class="abo-8nkjs1">成就无畏成本的超精细化先进流程</span><br>
+      <span class="abo-8nkjs2">多元人才结构团队，高效沟通，精准项目规划</span></div>
+    <ul class="abo-8nkk">
+      <li style="top: 0px; opacity: 1;">
+        <div class="abo-8nkk0"><img src="{$OSS_URL}img/8n-011.png" class="n8-011" height="202" width="202"><img src="{$OSS_URL}img/8n-01.png" class="n8-01" height="202" width="202">
+          <div class="n8-012">需求构建</div>
+        </div>
+        <div class="abo-8nkk1">了解您的需求</div>
+      </li>
+      <li style="top: 0px; opacity: 1;">
+        <div class="abo-8nkk0"><img src="{$OSS_URL}img/8n-021.png" class="n8-011" height="202" width="202"><img src="{$OSS_URL}img/8n-02.png" class="n8-01" height="202" width="202">
+          <div class="n8-012">品牌探索</div>
+        </div>
+        <div class="abo-8nkk1">了解您的品牌</div>
+      </li>
+      <li style="top: 0px; opacity: 1;">
+        <div class="abo-8nkk0"><img src="{$OSS_URL}img/8n-031.png" class="n8-011" height="202" width="202"><img src="{$OSS_URL}img/8n-03.png" class="n8-01" height="202" width="202">
+          <div class="n8-012">项目规划</div>
+        </div>
+        <div class="abo-8nkk1">定制专属方案</div>
+      </li>
+      <li style="top: 0px; opacity: 1;">
+        <div class="abo-8nkk0"><img src="{$OSS_URL}img/8n-041.png" class="n8-011" height="202" width="202"><img src="{$OSS_URL}img/8n-04.png" class="n8-01" height="202" width="202">
+          <div class="n8-012">制作至上线</div>
+        </div>
+        <div class="abo-8nkk1">项目实施及质量检查</div>
+      </li>
+    </ul>
+  </div>
+</div>
+<script type="text/javascript">
+$("#sucai00").niceScroll({  
+    cursorcolor:"#0098c5",  
+    cursoropacitymax:1,  
+    touchbehavior:false,  
+    cursorwidth:"2px",  
+    cursorborder:"0",  
+    cursorborderradius:"2px"  
+}); 
+</script> 
+<include file="../Common/footer1.html"/>
+</body>
+</html>

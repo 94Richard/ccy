@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<include file="../Common/meta.html" />
+<link rel="stylesheet" href="{$OSS_URL}css/Telephone.css"/>
+<include file="../Common/include.html" />
+
+<link rel="stylesheet" href="{$OSS_URL}css/Help.css"/>
+<link rel="stylesheet" href="{$OSS_URL}css/About.css"/>
+</head>
+<body>
+<include file="../Common/header.html" />
+<div  id="helpBg"> </div>
+<div class="qing abo-gy">
+  <div class="abo-gy-ti0">
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <td>
+           <foreach name='$helpList' id='help'>
+    <a href="{$APP_URL}{$help.url}" <if condition="$help.basic_id==$current_about_id">class="abonn"<else>class="abott1"</if>><span class="abott1">{$help.basic_name}</span><span class="abott2">{$help.basic_name}</span></a>
+           </foreach>
+           <a href="{$APP_URL}About/Payment"><span class="abott1">付款方式</span><span class="abott2">付款方式</span></a>
+         </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</div>
+
+
+<div class="telephone_banner"></div>
+<div class="this">
+  <div class="this_center">
+    <div class="this_img"></div>
+    <div class="this_text">400电话是一种主被叫分摊业务，即主叫承担市话接入费，被叫承担所有来电接听费用。其号码为全国统一十位数服务热线，有效提升企业品牌形象，体现了企业服务意识，是实力的象征。</div>
+  </div>
+</div>
+<div class="use">
+  <div class="use_center">
+    <div class="use1">
+      <div class="use_title">品牌形象大使</div>
+      <div class="use_text">400电话是全国范围独一无二的服务热线，在全国范围内只需拨打该号码，就能获得定制化服务，是企业和单位的有声名片，彰显信誉和实力。</div>
+    </div>
+    <div class="use2">
+      <div class="use_title">销售服务利器</div>
+      <div class="use_text">400用于热线接听，通过智能转接，实现24小时不占线，销售机会不流失；<br />
+        400用于外呼营销，显示400号码能够有效提升客户信任度，营销成功率大幅提升。</div>
+    </div>
+    <div class="use3">
+      <div class="use_title">能力提升宝典</div>
+      <div class="use_text">400平台提供录音功能，有效的质检能够避免差错，员工之间的案例学习和点评，能够帮助大家快速提升能力；知识库的快速检索更能让员工熟练应对各种情况。</div>
+    </div>
+    <div class="use4">
+      <div class="use_title">客户维系专家</div>
+      <div class="use_text">对外仅公布一个400号码，可有效避免员工流失造成的客户流失，任何一个客户的来电都可以记录保存，帮助您有效管理客户。</div>
+    </div>
+    <div class="use5">
+      <div class="use_title">精确管理大师</div>
+      <div class="use_text">00话费由企业和拨打400电话的用户分摊，能够有效避免恶意骚扰电话；通过来电话务分析、客户关系管理等功能，能够准确评估广告投放的效果，全面分析和了解客户。</div>
+    </div>
+  </div>
+</div>
+<div class="400ys"><img src="{$OSS_URL}img/400ys.jpg" /></div>
+<div class="opening"><img src="{$OSS_URL}img/opening.jpg" /></div>
+<include file="../Common/msg.html"/> <include file="../Common/footer1.html"/>
+</body>
+</html>

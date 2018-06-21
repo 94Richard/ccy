@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<include file="../Common/meta.html" /><include file="../Common/include.html"/>
+
+<link rel="stylesheet" href="{$OSS_URL}css/Help.css"/>
+<link rel="stylesheet" href="{$OSS_URL}css/About.css"/>
+</head>
+<body>
+<include file="../Common/header.html"/>
+<div  id="helpBg"> </div>
+<div class="qing abo-gy">
+  <div class="abo-gy-ti0">
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <td>
+           <foreach name='$helpList' id='help'>
+    <a href="{$APP_URL}{$help.url}" <if condition="$help.basic_id==$current_about_id">class="abonn"<else>class="abott1"</if>><span class="abott1">{$help.basic_name}</span><span class="abott2">{$help.basic_name}</span></a>
+           </foreach>
+           <a href="{$APP_URL}About/Payment"><span class="abott1">付款方式</span><span class="abott2">付款方式</span></a>
+         </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</div>
+
+
+<div class="help_right">
+    	{$meta.basic_content}
+    </div>
+</div>
+
+<include file="../Common/footer1.html"/>
+</body>
+</html>

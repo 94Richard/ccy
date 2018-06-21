@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="keywords" content="创驰云网络科技">
+<meta name="description" content="创驰云网络科技">
+<meta name="author" content="创驰云网络科技">
+<title>新闻_创驰云网络科技</title>
+<link rel="stylesheet" href=".././css/mui.min.css">
+<link rel="stylesheet" type="text/css" href=".././css/app.css" />
+<link rel="stylesheet" type="text/css" href=".././css/style.css" />
+<script src=".././js/mui.min.js"></script>
+</head>
+<body>
+<include file=".././Common/header.html"/>
+
+<div class="newslist">
+     <ul>
+     <foreach name='$newslist' id='vo'>
+         <li><a href="{$APP_URL}News/detail/id/{$vo.news_id}.html">
+             <div class="newslist-img"><img src="{$APP_URL}{$vo.news_spic}"></div>
+             <div class="newslist-title">{$vo.news_title}</div>
+             <div class="newslist-text">{:chinesesubstr_admin($vo.news_content,0,120)}</div></a>
+         </li>
+     </foreach>
+     </ul>
+     
+</div>
+<div class="pagin"> {$page}</div>
+<include file=".././Common/footer.html"/>
+
+</body>
+</html>

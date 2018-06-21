@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>基本内容</title>
+    <include file="../Common/Common_include.html"/>
+
+
+
+</head>
+
+
+<body>
+
+<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+        <li><a href="#">首页</a></li>
+        <li><a href="#">数据表</a></li>
+        <li><a href="#">基本内容</a></li>
+    </ul>
+</div>
+
+<div class="system">
+    <h3 style="text-align: left;">【系统信息】</h3>
+    <ul>
+
+        <foreach name="$info">
+            <li><font class="title">{$key}：</font><font>{$val}</font></li>
+        </foreach>
+    </ul>
+</div>
+
+<div class="Statistics">
+    <h3  style="text-align: left;">【数据统计】</h3>
+    <ul>
+        <foreach name="$countArr">
+            <li><font class="title">{$key}：</font><font>{$val}</font></li>
+        </foreach>
+    </ul>
+</div>
+
+
+
+</body>
+</html>

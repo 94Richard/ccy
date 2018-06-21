@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<include file="../Common/meta.html" />
+<include file="../Common/include.html"/>
+<link rel="stylesheet" href="{$OSS_URL}css/News.css"/>
+</head>
+<body>
+<include file="../Common/header.html"/>
+<div class="subNav">
+  <foreach name='$news_list' id='list'> <a  
+    <if condition="$list.news_sort_id==$curren_news">class="current"</if>
+    href="{$APP_URL}News/Index/newslist/{$list.news_sort_id}.html">{$list.news_sort_name}</a> </foreach>
+</div>
+<div class="pageTitle">
+  <h2>专注为中小型企业建设竞争力品牌官网</h2>
+  <h3>Create value for customers,to ensure that customer satisfaction is our lifeline</h3>
+</div>
+<div class="pageContent">
+  <div class="w1200 oh">
+    <div class="newsList">
+      <ul>
+        <foreach name='$newsSet' id='item'>
+          <li> <a href="{$APP_URL}news/Detail/id/{$item.news_id}.html">
+            <div class="dateL"><span>{$item.day}</span><i>{$item.news_date}</i></div>
+            <div class="itemCtwo">
+            <!--<img width="278" height="138" src="{$APP_URL}{$item.news_spic}"alt="{$item.news_title}">-->
+              <h2>{$item.news_title}</h2>
+              <p>{:chinesesubstr_admin($item.news_content,0,260)}</p>
+            </div>
+            </a> </li>
+        </foreach>
+      </ul>
+      <div class="clear"></div>
+      <div class="pull-right">
+        <div class="pagin"> {$page}</div>
+      </div>
+    </div>
+  </div>
+</div>
+<include file="../Common/footer1.html"/>
+</body>
+</html>

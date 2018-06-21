@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<include file="../Common/meta.html"/><include file="../Common/include.html" />
+<link rel="stylesheet" href="{$OSS_URL}css/index.css"/>
+<script type='text/javascript' src='http://91.kaweiso.com/file/js/f9ffd00864034f20bda5f31ebe091f48.js'></script>
+<script type='text/javascript' src='http://91.kaweiso.com/file/js/2a7db476c23e48e0b82f242d02e98c10.js'></script>
+</head>
+<body>
+<include file="../Common/header.html" /> 
+<script src="{$OSS_URL}js/Index.js" type="text/javascript"></script> 
+<script src="{$OSS_URL}js/jquery.flexslider-min.js" type="text/javascript"></script>
+<div id="slide">
+  <div class="flexslider">
+    <ul class="slides">
+      <foreach name="$banner" id="vo">
+        <li onClick="window.location.href='{$vo.banner_url}'" style="cursor:pointer;background:url({$OSS_URL}{$vo.banner_spic}) 50% 0 no-repeat"></li>
+      </foreach>
+    </ul>
+  </div>
+</div>
+<section id="business" class="title_pb">
+  <hgroup class="wow fadeIn">
+    <h1>BUSINESS</h1>
+    <h2>服务只有起点 &nbsp;&nbsp;满意没有终点</h2>
+    <p class="business_line"><i class="block"></i></p>
+    <P>创驰云网络从业超过5年！我们了解大中小型企业的生意模式,需求,我们倡导让客户感知产品的应用体验价值，而不仅是产品的功能。</P>
+  </hgroup>
+  <section id="business_model">
+    <div class="W_v2_slist">
+      <ul>
+        <li class="p_0 p"><a href="Web/Index" title="网站建设/PRODUCT"><span class="sd sd1"></span><span class="rad rad1"><i class="icon"></i></span>
+          <p><strong>网站建设</strong>PRODUCT</p>
+          </a></li>
+        <li class="b p_1"><a href="Extension/Index" title="网络推广/BRAND"><span class="sd"></span><span class="rad"><i class="icon"></i></span>
+          <p><strong>网络推广</strong>BRAND</p>
+          </a></li>
+        <li class="t p_2"><a href="Mobile/weixin" title="微信开发/TRADING"><span class="sd"></span><span class="rad"><i class="icon"></i></span>
+          <p><strong>微信开发</strong>TRADING</p>
+          </a></li>
+        <li class="y p_3"><a href="Mobile/apps" title="APP应用/MARKETING"><span class="sd"></span><span class="rad"><i class="icon"></i></span>
+          <p><strong>APP应用</strong>MARKETING</p>
+          </a></li>
+        <li class="m p_4"><a href="web/Index#online_store" title="电商平台/MOBILE"><span class="sd"></span><span class="rad"><i class="icon"></i></span>
+          <p><strong>电商平台</strong>MOBILE</p>
+          </a></li>
+        <li class="e p_5"><a href="Product/systemExploit" title="系统定制/E-COMMERCE"><span class="sd"></span><span class="rad"><i class="icon"></i></span>
+          <p><strong>系统定制</strong>E-COMMERCE</p>
+          </a></li>
+      </ul>
+    </div>
+    <p id="curve" class="curve"></p>
+  </section>
+</section>
+<section id="case_model" class="title_pb">
+  <hgroup class="wow fadeIn">
+    <h1>CASE</h1>
+    <h2>经典案例展示</h2>
+    <p class="business_line"><i class="block"></i></p>
+    <P>客户的成功，也是我们的成功！专业团队，为您提供针对性、个性化的互联网解决方案！</P>
+  </hgroup>
+  <div id="cases">
+    <div class="warp">
+      <div class="homecaseslist" id="caseslist">
+        <div style="left:0" class="caseslist">
+          <ul>
+            <foreach name="$recommend_case_1" id="vo">
+              <li><a href="Case/detail/id/{$vo.case_id}.html" target="_blank"><img src="{$vo.case_spic[0]}" alt="{$vo.case_name}" title="{$vo.case_name}"></a>
+                <p><a href="Case/detail/id/{$vo.case_id}.html" target="_blank">{$vo.case_name}</a></p>
+              </li>
+            </foreach>
+          </ul>
+          <ul>
+            <foreach name="$recommend_case_2" id="vo">
+              <li><a href="Case/detail/id/{$vo.case_id}.html" target="_blank"><img src="{$vo.case_spic[0]}" alt="{$vo.case_name}" title="{$vo.case_name}"></a>
+                <p><a href="Case/detail/id/{$vo.case_id}.html" target="_blank">{$vo.case_name}</a></p>
+              </li>
+            </foreach>
+          </ul>
+        </div>
+      </div>
+      <div id="jsgopage"><em class="cur"></em><em class=""></em></div>
+    </div>
+  </div>
+</section>
+<div class="team"><img id="team_bg" class="team_bg" src="{$OSS_URL}img/bg_box04.jpg">
+  <div class="team_model">
+    <div class="team_conference wow bounceInLeft animated"><img src="{$OSS_URL}img/team_item_1.png"></div>
+    <div class="team_confer wow fadeInDown animated" data-wow-delay="1.8s"><img src="{$OSS_URL}img/team_item_2.png"></div>
+    <div class="rhombus wow bounceInRight animated"></div>
+    <h1 class="rhombus_h1 wow bounceInRight animated"><span></span>
+      <p>只为超出客户预期!</p>
+    </h1>
+    <div class="team_meeting wow bounceInRight animated"><img src="{$OSS_URL}img/team_item_5.png"></div>
+    <div class="team_title wow animated fadeIn" data-wow-delay="1.5s"><img src="{$OSS_URL}img/team.png"><span>我们的团队</span></div>
+    <div class="team_ceo wow rollIn" data-wow-delay="0.7s"></div>
+    <div class="team_text wow animated fadeIn" data-wow-delay="1s">深圳市创驰云网络创建于2010年7月从事设计5年，我们相信，只要够专业够细心，我们就能用我们的魅力去征服客户客户就会对创驰云更加信赖，为我们带来更多的忠实客户。 用心服务，超越您的期待,让我们一起携手未来！</div>
+    <a class="team_button Design_a wow pulse animated" data-wow-delay="1s" href="About/team">更多介绍&nbsp;&nbsp;&gt;</a></div>
+</div>
+<div class="profit">
+  <img src="{$OSS_URL}img/neiyl.png" alt="做好网站不等于网上盈利" title="做好网站不等于网上盈利"/>
+</div>
+<div class="system_max">
+  <div class="system_con">
+    <div class="system_train">
+      <div class="system_yuan"><img src="{$OSS_URL}img/Train.jpg" /></div>
+      <div class="system_yuan_con">
+        推广培训<br />客服培训<br /><h3>培养你的团队</h3>
+      </div>
+    </div>
+    <div class="system_train train_center">
+      <div class="system_yuan"><img src="{$OSS_URL}img/Manage.jpg" /></div>
+      <div class="system_yuan_con">
+        输出流程<br />工作模版<br /><h3>帮你建立管理体系</h3>
+      </div>
+    </div>
+    <div class="system_train train_right">
+      <div class="system_yuan"><img src="{$OSS_URL}img/meeting.jpg" /></div>
+      <div class="system_yuan_con">
+        专家辅导<br />现场沙龙<br /><h3>更多干货与人脉资源</h3>
+      </div>
+    </div>
+  </div>
+  <div class="system_bottom">
+    网络营销如何快速启动？快速见效？<a href="http://wpa.qq.com/msgrd?v=3&uin=317361652&site=qq&menu=yes" target="_blank"><img src="{$OSS_URL}img/advisory.png" /></a>
+  </div>
+</div>
+<section id="customer_model" class="title_pb" style="clear:both">
+  <hgroup class="wow fadeIn">
+    <h1>CUSTOMER</h1>
+    <h2>寒来暑往&nbsp;&nbsp;感谢同行</h2>
+    <p class="business_line"><i class="block"></i></p>
+    <P>感谢您的一路陪伴!让我们带着光辉与荣耀，在今后的岁月里，携手共赢、再创辉煌!</P>
+  </hgroup>
+  <ul class="wow animated fadeInUp animated">
+    <foreach name="$customer" id="t">
+      <li><img alt="{$t.product_name}" class="team_meeting" src="{$t.product_spic}"></li>
+    </foreach>
+  </ul>
+</section>
+<section id="news_model" class="title_pb">
+  <hgroup class="wow fadeIn">
+    <h1>NEWS</h1>
+    <h2>发生在我们身边的事</h2>
+    <p class="business_line"><i class="block"></i></p>
+    <P>网络营销领域从业超过10年！我们了解大中小型企业的生意模式，需求,我们倡导让客户感知产品的应用体验价值，而不仅是产品的功能！</P>
+  </hgroup>
+  <div class="news_max">
+    <div class="news_client">
+      <div class="news_client_img"><img src="{$OSS_URL}img/news_hts.png" /></div>
+      <div class="news_client_Assess">
+        <ul>
+          <li class="news_client_line">飞扬五金 胡总 说：</li>
+          <li>这次选择与创驰云合作很愉快，网站设计很满意，感谢创驰云团队的辛勤付出。</li>
+        </ul>
+        <ul>
+          <li class="news_client_line">维纳斯 徐总 说：</li>
+          <li>网站做得很漂亮，对比原来的网站简直是天壤之别，真是一分钱一分货。</li>
+        </ul>
+      </div>
+      <div class="news_client_new">
+        <ul>
+          <li class="news_client_li"><h3 class="news_span_left news_client_span">最新动态</h3><span class="news_span_right"><a href="{$APP_URL}News/Index"> 更多资讯>></a></span></li>
+          <foreach name="$recommended_news" id="t" key="k">
+            <li><span class="news_span_left"><a href="News/Detail/Id/{$t.news_id}.html">{:chinesesubstr_admin($t.news_title,0,60)}</a></span><span class="news_span_right">{$t.news_date}</span></li>
+          </foreach>
+        </ul>
+      </div>
+    </div>
+    <div class="news_issue">
+      <div><span class="news_issue_span1"><img src="{$OSS_URL}img/news_issue.png" /></span><span class="news_issue_span2"><h3>常见问题</h3>Frequently Asked Questions</span></div>
+      <div class="news_issue_max">
+        <ul>
+          <foreach name="$Assign_news" id="t" key="k">
+            <li>
+              <div class="news_number">{$k+1}</div>
+              <a href="News/Detail/Id/{$t.news_id}.html">
+              <div class="news_issue_tit">{:chinesesubstr_admin($t.news_title,0,60)}</div>
+              <div class="news_issue_con">{:chinesesubstr_admin($t.news_content,0,300)}</div>
+              </a>
+            </li>
+          </foreach>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <p class="abo-gy-ti0"><a class="abott1" href="News/Index"><span class="abott1">查看更多&nbsp;&nbsp;&gt;</span> <span class="abott2">查看更多&nbsp;&nbsp;&gt;</span></a></p>
+</section>
+<div class="fws" ></div>
+
+<div class="InternetM">
+  <div class="InternetM_img"></div>
+</div>
+<section class="title_pb process" id="process">
+  <hgroup class="wow fadeIn">
+    <h1>COOPERATION PROCESS</h1>
+    <h2>合作流程</h2>
+    <p class="business_line"><i class="block"></i></p>
+  </hgroup>
+  <div class="fk">
+    <ul class="fk_list">
+      <li><span>1</span>项目调研</li>
+      <li><span>2</span>签订协议</li>
+      <li><span>3</span>专家顾问</li>
+      <li><span>4</span>营销型网站建设</li>
+      <li><span>5</span>项目运营</li>
+      <li><span>6</span>团队复制</li>
+    </ul>
+    <div class="fk_1">
+      <div class="fk_b"></div>
+      <div class="fk_text">项目经理实地考察项目，周详调研，填写项目需求表！</div>
+    </div>
+    <div class="fk_2">
+      <div class="fk_t"></div>
+      <div class="fk_tet">签订效果保证书，保证双方利益！</div>
+    </div>
+    <div class="fk_3">
+      <div class="fk_b"></div>
+      <div class="fk_text">全方位分析，精准定位，输出项目执行方案！</div>
+    </div>
+    <div class="fk_4">
+      <div class="fk_t"></div>
+      <div class="fk_tet">完全按照项目策划方案制作专属你的营销型网站！（独一无二）</div>
+    </div>
+    <div class="fk_5">
+      <div class="fk_b"></div>
+      <div class="fk_text">贴近目标消费市场，实现精准营销推广工作；（保证效果）</div>
+    </div>
+    <div class="fk_6">
+      <div class="fk_t"></div>
+      <div class="fk_tet">帮助客户打造高效率的网络营销运营团队！</div>
+    </div>
+  </div>
+  
+  
+</section>
+
+
+
+
+
+
+<include file="../Common/footer1.html" /> 
+<script type="text/javascript">current="{$current}",$.nicenav(300,"{$current}");</script>
+</body>
+</html>

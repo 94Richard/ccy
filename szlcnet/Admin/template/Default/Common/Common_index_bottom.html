@@ -1,0 +1,23 @@
+<div class="panel-footer">
+  <div class="pull-left">
+    <div class="btn-group myoption">
+      <button type="button" class="btn btn-default" id="allSelect"><span
+                        class="glyphicon glyphicon-ok"></span> 全选 </button>
+      <button type="button" class="btn btn-default" id="InverSelectBtn"><span
+                        class="glyphicon glyphicon-ok"></span> 反选 </button>
+      <button type="button" class="btn btn-default" id="allUnSelect"><span
+                        class="glyphicon glyphicon-ok"></span> 全不选 </button>
+      <select  class="form-control selectSubmit" id="selectSubmit">
+        <option>请选择</option>
+        <option title="您确认删除？删除后无法恢复！" value="{url f='delete' name='$id' tab='$tableName'}">删除</option>
+        <if condition="!$select_option">
+          <option value="{url f='status' status='1'}">启用</option>
+          <option value="{url f='status' status='0'}">锁定</option>
+        </if>
+      </select>
+    </div>
+  </div>
+  <div class="pull-right">
+    <div class="pagin"> {$page}</div>
+  </div>
+</div>

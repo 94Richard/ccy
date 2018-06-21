@@ -1,0 +1,92 @@
+<a name="guestBook">
+<div class="information">
+  <div class="information_top">
+    <h3>{$guest_title}</h3>
+    <h4>{$guest_instructions}</h4>
+  </div>
+  <form method="post" action="{$APP_URL}Msg/extensionMsg" class="ajax_form" id="ajax_form">
+    <div class="information_center">
+      <table border="0" width="1198">
+        <tr height="45">
+          <td width="135" align="right"><label><i>*</i>公司名称</label></td>
+          <td width="400"><input name="company" type="text" id="text" class="information_input"
+                                               nullmsg="请输入公司名称" must="must"/></td>
+          <td width="200" align="right"><label><i>*</i>手机号码</label></td>
+          <td><input type="tel" name="tel" class="information_input" id="mobile" must="must"
+                                   nullmsg="请输入您的手机号码"/></td>
+        </tr>
+        <tr height="45" style="color:#aeaeae; text-indent:10px;">
+          <td>&nbsp;</td>
+          <td>如：深圳市创驰云网络技术开发有限公司</td>
+          <td>&nbsp;</td>
+          <td>如：15817460855（前无需加0）</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr height="45">
+          <td align="right"><label><i>*</i>主营产品</label></td>
+          <td><input name="product" class="information_input" type="text" must="must"
+                                   nullmsg="请输入您公司的主营产品项目!"></td>
+          <td align="right"><label>您的QQ</label></td>
+          <td><input name="qq" class="information_input" type="text"></td>
+        </tr>
+        <tr height="45" style="color:#aeaeae; text-indent:10px;">
+          <td>&nbsp;</td>
+          <td>如：互联网</td>
+          <td>&nbsp;</td>
+          <td>如：317361652</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr height="45">
+          <td align="right"><label><i>*</i>联系人</label></td>
+          <td><input name="name" class="information_input" type="text" must="must"
+                                   nullmsg="请输入姓名，以方便我们联系到您!"></td>
+          <td align="right"><label><i>*</i>常用邮箱</label></td>
+          <td><input name="email" class="information_input" type="text" nullmsg="请输入您的邮箱地址" must="must"></td>
+        </tr>
+        <tr height="45" style="color:#aeaeae; text-indent:10px;">
+          <td>&nbsp;</td>
+          <td>如：石小姐</td>
+          <td>&nbsp;</td>
+          <td>如：shiliu@szlcnet.com</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr height="45">
+          <td align="right"><label><i>*</i>联系电话</label></td>
+          <td><input name="phone" class="information_input" type="text" nullmsg="请输入您的联系电话" must="must"></td>
+          <td align="right"><label>公司网址</label></td>
+          <td><input name="website" class="information_input" type="text"></td>
+        </tr>
+        <tr height="45" style="color:#aeaeae; text-indent:10px;">
+          <td>&nbsp;</td>
+          <td>如：0755-33059400</td>
+          <td>&nbsp;</td>
+          <td>如：www.szlcnet.com</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+      <input type="hidden" value="{$subject}" name="subject" />
+      <div class="information_bottom"> <a class="team_button Design_a" id="submitAjax_a">提交</a> </div>
+    </div>
+  </form>
+</div>
+</a>

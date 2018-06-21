@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <include file="../Common/meta.html" />
+<link rel="stylesheet" href="{$OSS_URL}css/Recruit.css"/>
+<include file="../Common/include.html" />
+<script>
+
+$(function(){
+	$(".tab").click(function(){
+		 layer.open({
+			 title: "应聘信息查看",
+	  		type: 2,
+	     	skin: 'layui-layer-rim', //加上边框
+	  		area: ['1000px', '600px'], //宽高
+	  		content:"{$APP_URL}Recruit/detail/id/"+$(this).attr("data-id")
+		});
+	})
+})
+
+
+</script>
+</head>
+<body>
+<include file="../Common/header.html" />
+<div class="recruit_banner"></div>
+<div class="recruit_list">
+  <ul>
+    <li style="background:#018ae1;" class="top">
+      <table border="0">
+        <tr >
+          <td width="280">招聘岗位</td>
+          <td width="275">招聘人数</td>
+          <td width="270">工作地点</td>
+          <td width="170">薪资</td>
+          <td width="230">发布日期</td>
+        </tr>
+      </table>
+    </li>
+    
+    <foreach name='$list' id='vo'>
+      <li>
+        <table border="0">
+          <tr class="tab" data-id="{$vo.id}">
+            <td width="280">{$vo.job}</td>
+            <td width="275">{$vo.recruitment_num}</td>
+            <td width="270">{$vo.address}</td>
+            <td width="170">{$vo.salary}</td>
+            <td width="230">{:dateFormat($vo.sart_time)}</td>
+          </tr>
+        </table>
+      </li>
+    </foreach>
+  </ul>
+</div>
+<include file="../Common/footer1.html"/>
+</body>
+</html>

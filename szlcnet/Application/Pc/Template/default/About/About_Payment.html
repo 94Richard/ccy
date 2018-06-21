@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<include file="../Common/meta.html"/>
+<include file="../Common/include.html"/>
+<link rel="stylesheet" href="{$OSS_URL}css/About.css"/>
+<link rel="stylesheet" href="{$OSS_URL}css/Payment.css"/>
+<script type="text/javascript" src="{$OSS_URL}js/niceScroll.js"></script>
+</head>
+<body>
+<include file="../Common/header.html"/>
+<div id="contactUsBg"> </div>
+
+<!-- 付款方式、人才招聘 -->
+<div class="qing " style=" margin-top:-101px;">
+  <div class="abo-gy-ti0" style="padding-bottom:0;">
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <td height="104">
+            <foreach name='$aboutList' id='about'>
+    <a href="{$APP_URL}{$about.url}" <if condition="$about.basic_id==$current_about_id">class="abonn"<else>class="abott1"</if>><span class="abott1">{$about.basic_name}</span><span class="abott2">{$about.basic_name}</span></a>
+           </foreach>
+        </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="abo-gy-kk">
+    <table class="abobg2" bgcolor="#f0f0f0" border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tbody>
+        <tr>
+          <td width="25%"><div class="qing abk"><img original="/Public/Home/images/fuk-k10.png" src="{$OSS_URL}img/fuk-k10.png" class="abk10" width="100%"><img original="/Public/Home/images/fuk-k1.jpg" src="{$OSS_URL}img/fuk-k1.jpg" class="abk1" width="100%"></div></td>
+          <td width="75%" valign="top"><div tabindex="5000" style="overflow: hidden;" class=" zhifu" id="sucai0">
+          
+          <foreach name='$backList' id='back'>
+              <div class="fkfs">
+                <div class="fkfsn">
+                  <table border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <td><div class="fkfsn-ti"><img src="{$APP_URL}{$back.product_spic}" height="60" width="210"></div>
+                          <div class="fkfsn-nr">{$back.product_content}
+                          </div></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+             </foreach>
+            </div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<include file="../Common/footer1.html"/>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>添加新闻</title>
+<include file="../Common/Common_include.html" />
+</head>
+
+<body class="pad_bottom_20">
+<div class="place"><span><i class="glyphicon glyphicon-th-list"></i>&nbsp;位置：</span>
+  <div class="pull-left">
+    <ul class="placeul">
+      <li><a href="javascript:;">添加新闻 </a></li>
+    </ul>
+  </div>
+  <div class="pull-right"> <a class="btn btn-primary insetBtn" href="{url f='add'}" type="button"><i
+            class="fa fa-pencil"></i>&nbsp;&nbsp;新增</a> </div>
+</div>
+<div class="formbody">
+  <div class="formtitle"><span>添加新闻</span></div>
+  <form method="post" action="{url f='insert'}"  class="ajax_form">
+    <table cellspacing="1" class="myform">
+      <tr>
+        <td align="right">所属分类：</td>
+        <td><select name="parent_id" class="form-control selectSubmit">
+            <option value="0">--请选择--</option>
+            <foreach name='$list' id='v'}
+            
+            <option value="{$v.news_sort_id}">{$v.news_sort_name} </option>
+            </foreach>
+          </select></td>
+      </tr>
+      <tr>
+        <td align="right"  ><font color="red">*</font>新闻标题</td>
+        <td  ><input name="news_title" type="text" class="form-control" id="news_title" size="50" maxlength="100"></td>
+      </tr>
+      <tr>
+        <td align="right">配图：</td>
+        <td><include file="../Common/Common_ajaxUpload.html" /></td>
+      </tr>
+      <tr>
+        <td align="right" nowrap >SEO页面标题：</td>
+        <td ><input name="news_seo_title" type="text" class="form-control" id="news_seo_title" size="85"></td>
+      </tr>
+      <tr>
+        <td align="right" nowrap >SEO描述：</td>
+        <td ><textarea name="news_seo_description" cols="50" class="form-control bootstrp_textarea top8" id="news_seo_description"></textarea></td>
+      </tr>
+      <tr>
+        <td align="right" nowrap >SEO关键词：</td>
+        <td ><textarea name="news_seo_keword" cols="50" class="form-control bootstrp_textarea top8" id="news_seo_keword"></textarea></td>
+      </tr>
+      <tr>
+      <tr>
+        <td align="right">排 序：</td>
+        <td><input type="text" name="news_order" value="{$vo.news_order}" size="25" class="form-control" /></td>
+      </tr>
+      <tr>
+        <td align="right">推荐：</td>
+        <td><input type="radio" name="news_commend" value="1"
+
+          
+          <if condition="$vo.news_commend==1">checked</if>
+          />
+          是 <input name="news_commend" type="radio" value="0"
+
+          
+          <if condition="$vo.news_commend==0">checked</if>
+          />
+          否 </td>
+      </tr>
+      <tr>
+        <td align="right">新闻内容：</td>
+        <td style="padding: 8px;"><textarea name="news_content" cols="68" rows="6" class="form-control bootstrp_textarea top8">{$vo.news_content}</textarea></td>
+      </tr>
+      <tr>
+        <td align="right"><input type="hidden" name="id" value="{$vo.news_id}" />
+          <input type="hidden" name="name" value="news_id" />
+          <include file="../Common/Common_lang.html"/></td>
+        <td>
+         <input type="hidden" name="refresh" value="{url f='index'}" />
+          <input type="hidden" name="sort_id" value="parent_id" />
+          
+        <button type="button" class="btn btn-primary ajax_btn" data-url="{url f='index'}">提交</button></td>
+      </tr>
+    </table>
+  </form>
+</div>
+<script src="{$APP_URL}/template/Default/kindeditor/kindeditor.js?t=" +new Date()></script> 
+<script charset="utf-8" src="{$APP_URL}/template/Default/kindeditor/lang/zh_CN.js"></script> 
+<script>
+  KindEditor.ready(function (K) {
+    editor = K.create('textarea[name="news_content"]', {
+      allowFileManager: true,
+      width: "100%", //新增器的宽度为70%
+      height: "450px", //新增器的高度为100px
+      afterBlur: function () {
+        this.sync();
+      }
+    });
+
+  });
+</script> 
+<script language="javascript" type="text/javascript">
+  require(['./js/common.js'], function (common) {
+    require(['./js/public/edit.js']);
+    require(['./js/public/product.js']);
+  });
+</script>
+</body>
+</html>

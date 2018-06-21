@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <include file="../Common/Common_include.html"/>
+</head>
+<body>
+
+<div class="place"><span><i class="glyphicon glyphicon-th-list"></i>&nbsp;位置：</span>
+
+    <div class="pull-left">
+        <ul class="placeul">
+            <li><a href="javascript:;">后台权限编辑 </a></li>
+        </ul>
+    </div>
+    <div class="pull-right">
+        <a class="btn btn-primary insetBtn" href="{url f='add'}" type="button"><i
+                class="fa fa-pencil"></i>&nbsp;&nbsp;新增</a>
+    </div>
+</div>
+
+
+<div class="formbody">
+    <div class="formtitle"><span>新增权限</span></div>
+    <form method="post" action="{url f='update'}" class="ajax_form">
+        <table cellspacing="1">
+            <tr>
+                <td width="100">上级父类：</td>
+                <td><select name="pid" class="form-control">
+                    <option value="0">根目录</option>
+                    <foreach name='$parent_auth' id='v'>
+                        <option value="{$v.id}">{$v.title}</option>
+                    </foreach>
+                </select></td>
+            </tr>
+            <tr>
+                <td>标题名称：</td>
+                <td><input name="title" placeholder="请输入名称" value="{$vo.title}" class="form-control" type="text"></td>
+            </tr>
+            <tr>
+                <td>图标CSS：</td>
+                <td><input name="css_icon" placeholder="请输入名称" class="form-control" type="text" value="{$vo.css_icon}">
+                </td>
+                <td><span class="msgInfo_input"><a target="_blank" href="http://fontawesome.dashgame.com/">请输入fontawesome
+                    图标CSS</a></span></td>
+            </tr>
+            <tr>
+                <td>所属Action名称：</td>
+                <td><input name="auth_action" placeholder="请输入Action名称" value="{$vo.auth_action}" class="form-control"
+                           type="text"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>所属Action方法：</td>
+                <td><input name="auth_fun" placeholder="请输入Action方法" value="{$vo.auth_fun}" class="form-control"
+                           type="text"></td>
+                <td><span class="msgInfo_input"><i>*</i>以,分隔且以,结尾(多操作组合成一个权限)!</span></td>
+            </tr>
+            <tr>
+                <td>菜单名称：</td>
+                <td><input name="menu_name" placeholder="请输入菜单名称" value="{$vo.menu_name}" class="form-control"
+                           type="text"></td>
+            </tr>
+            <tr>
+                <td>菜单地址：</td>
+                <td><input name="menu_url" placeholder="请输入菜单地址" value="{$vo.menu_url}" class="form-control"
+                           type="text"></td>
+            </tr>
+            <tr>
+                <td>排 序：</td>
+                <td><input type="text" name="orderid" size="6" value="{$vo.orderid}" placeholder="排序数字越大越靠前"
+                           class="form-control"/></td>
+            </tr>
+            <tr>
+                <td>状 态：</td>
+                <td><select name="status" class="form-control">
+                    {:myselect('启用:1,锁定:0',$vo.status)}
+                </select></td>
+            </tr>
+            <tr>
+                <td><input type="hidden" name="id" value="{$vo.id}"/></td>
+                <td>
+                    <button type="button" class="btn btn-primary ajax_btn" data-url="{url f='index'}">提交</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<script language="javascript" type="text/javascript">
+    require(['./js/common.js'], function (common) {
+        require(['./js/public/edit.js']);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<include file="../Common/meta.html" />
+<include file="../Common/include.html" />
+<link rel="stylesheet" href="{$OSS_URL}css/News.css"/>
+</head>
+<body>
+<include file="../Common/header.html" />
+<div class="subNav">
+  <foreach name='$news_list' id='list'> <a  
+    
+    
+    
+    <if condition="$list.news_sort_id==$curren_news">class="current"</if>
+    href="{$APP_URL}News/Index/newslist/{$list.news_sort_id}.html">{$list.news_sort_name}</a> </foreach>
+</div>
+<div class="pageTitle">
+  <h2>专注为中小型企业建设竞争力品牌官网</h2>
+  <h3>Create value for customers,to ensure that customer satisfaction is our lifeline</h3>
+</div>
+<div class="pageNews">
+  <div class="newsDetailed"> {$detail.news_content} </div>
+  <div class="newsPage">
+    <dl>
+      <dt>
+        <p>上一篇
+          <if condition="$prev==null"><a class="prev_a selected " href="javascript:;">没有了</a>
+            <else>
+            <a  href="{$APP_URL}News/detail/id/{$prev}.html">上一条记录</a> </if>
+        </p>
+        <p>下一篇:
+          <if condition="$next==null"><a href="javascript:;">没有了</a>
+            <else>
+            <a  href="{$APP_URL}News/detail/id/{$next}.html">上一条记录</a> </if>
+        </p>
+      </dt>
+      <dd><a href="javascript:history.back(-1);" class="return">返回列表</a></dd>
+    </dl>
+  </div>
+</div>
+<include file="../Common/footer1.html"/>
+</body>
+</html>

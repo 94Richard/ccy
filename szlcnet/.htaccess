@@ -1,0 +1,14 @@
+#errorDocument 404 http://127.0.0.1/cxy2/view/404.php
+RewriteEngine On
+
+#如果文件存在，就直接访问文件，不进行下面的RewriteRule.
+RewriteCond %{REQUEST_FILENAME} !-f
+
+#如果目录存在就直接访问目录不进行RewriteRule
+RewriteCond %{REQUEST_FILENAME} !-d
+
+#如果是这些后缀的文件，就直接访问文件，不进行Rewrite 
+RewriteCond %{REQUEST_URI} !.*\.(ico|gif|jpg|jpeg|png|swf|js|css)
+
+#下面的才是对php 文件进行UR伪静态
+RewriteRule  ^(.*)    route.php?route=$1 [L,QSA]

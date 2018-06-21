@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>编辑单页分类</title>
+<include file="../Common/Common_include.html" />
+</head>
+
+<body>
+<div class="place"><span><i class="glyphicon glyphicon-th-list"></i>&nbsp;位置：</span>
+  <div class="pull-left">
+    <ul class="placeul">
+      <li><a href="javascript:;">新增单页分类 </a></li>
+    </ul>
+  </div>
+</div>
+<div class="formbody">
+  <div class="formtitle"><span>新增分类</span></div>
+  <form method="post" action="{url f='update'}" class="ajax_form" >
+    <table cellspacing="1" class="myform">
+      
+        <td align="right">分类名称：</td>
+        <td><input type="text" name="basic_sort_name" size="25" id="input_alias" value="{$vo.basic_sort_name}" class="form-control"  /></td>
+      </tr>
+      <tr>
+        <td align="right">别名：</td>
+        <td><input type="text" name="basic_alias" id="alias" size="25" value="{$vo.basic_alias}" class="form-control"  /></td>
+      </tr>
+      <tr>
+        <td align="right">上级分类：</td>
+        <td><select name="parent_id" class="form-control">
+            <option value="0">无</option>
+            <foreach name='$parent_list' id='v'}
+
+            <option value="{$v.basic_sort_id}"
+            
+            <if condition="$vo.parent_id==$v.basic_sort_id">selected="selected"</if>
+            >{$v.basic_sort_name}
+          
+            </option>
+            </foreach>
+          </select></td>
+      </tr>
+      <tr>
+        <td align="right">排 序：</td>
+        <td><input type="text" name="basic_sort_order" value="{$vo.basic_sort_order}" size="25" class="form-control" /></td>
+      </tr>
+      <tr>
+        <td align="right">分类描述：</td>
+        <td><textarea name="basic_sort_content" cols="68" rows="6" class="form-control bootstrp_textarea">{$vo.basic_sort_content}</textarea></td>
+      </tr>
+      <tr>
+        <td align="right"><input type="hidden" name="id" value="{$vo.basic_sort_id}" />
+          <input type="hidden" name="name" value="basic_sort_id" />
+          <include file="../Common/Common_lang.html"/></td>
+        <td><button type="button" class="btn btn-primary ajax_btn" data-url="{url f='index'}">提交</button></td>
+      </tr>
+    </table>
+  </form>
+</div>
+<script language="javascript" type="text/javascript">
+  require(['./js/common.js'], function (common) {
+    require(['./js/public/edit.js']);
+  });
+</script>
+</body>
+</html>

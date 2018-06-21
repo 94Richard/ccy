@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>编辑用户</title>
+<include file="../Common/Common_include.html" />
+</head>
+
+<body>
+<div class="place"><span><i class="glyphicon glyphicon-th-list"></i>&nbsp;位置：</span>
+
+  <div class="pull-left">
+    <ul class="placeul">
+      <li><a href="javascript:;">回复留言</a></li>
+    </ul>
+  </div>
+
+</div>
+<div class="formbody">
+  <div class="formtitle"><span>编辑留言</span></div>
+  <form method="post" action="{url f='update'}" >
+    <table cellspacing="1" >
+      <tr>
+      <tr>
+        <td width="80">留言者：</td>
+        <td class="form-control" style=" float: left; margin-left: 8px;">{$vo.content}</td>
+      </tr>
+      <tr>
+        <td  width="80">会员留言：</td>
+        <td><textarea  cols="68" rows="6" style="resize:none;" readonly="readonly" class="form-control bootstrp_textarea top8">{$vo.content}</textarea></td>
+      </tr>
+      <tr>
+      <tr>
+        <td width="80">回复内容：</td>
+        <td><textarea name="reply" cols="68"  style="resize:none;" rows="6" class="form-control bootstrp_textarea top8">{$vo.reply}</textarea></td>
+      </tr>
+      <tr>
+        <td align="right"></td>
+        <td>
+          <include file="../Common/Common_lang.html"/>
+          <button type="button" class="btn btn-primary ajax_btn" data-url="{url f='index'}">提交</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
+</body>
+</html>

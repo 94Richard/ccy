@@ -1,0 +1,94 @@
+﻿<header id="header">
+  <div class="headDiv">
+    <div class="t1">
+      <dl>
+        <dt class="yahei"><img src="{$OSS_URL}img/t_phone.jpg" class="t_phone"  /><span>全国服务热线：<strong>{$web.tel_400}</strong></i> </dt>
+        <dd> <a href="{$APP_URL}Recruit/Index">人才招聘</a> <a href="{$APP_URL}News/Index">新闻中心</a><a href="{$APP_URL}About/Index">关于我们</a>
+      </dl>
+    </div>
+    <div class="head">
+      <p class="overimg logo"><a href="{$APP_URL}"> <img src="{$OSS_URL}img/logo.png"> </a> <i
+                    class="light"></i></p>
+      <div class="nav">
+        <ul>
+          <li><a href="{$APP_URL}">首页</a></li>
+          <li><a href="{$APP_URL}Marketing/Index">营销型网站</a></li>
+          <li><a href="{$APP_URL}Extension/Index">网络推广</a>
+            <div style="display: none;" class="exeion">
+              <ul>
+                <foreach name='$extension' id='vo' key='k'>
+                  <li><a href="{$APP_URL}{$vo.url}"  title="{$vo.basic_name}">{$vo.basic_name}</a></li>
+                </foreach>
+              </ul>
+            </div>
+          </li>
+          <li><a href="{$APP_URL}Mobile/Index">移动开发</a>
+            <div style="display: none;" class="exeion">
+              <ul>
+                <foreach name='$basic_mobile' id='vo' key='k'>
+                  <li><a href="{$APP_URL}{$vo.url}"  title="{$vo.basic_name}">{$vo.basic_name}</a></li>
+                </foreach>
+              </ul>
+            </div>
+          </li>
+          <li><a href="{$APP_URL}Web/Scheme">创意策划</a></li>
+          <li><a href="{$APP_URL}Case/Index">经典案例</a></li>
+          <li><a href="javascript:;">产品服务</a>
+            <div style="display: none;" class="submenu yahei">
+              <dl>
+                <dt>网站建设<span><img src="{$OSS_URL}img/nav_img1.png"></span></dt>
+                <dd>
+                  <ul>
+                    <li><a href="{$APP_URL}web/Index" title="官网建设">官网建设</a></li>
+                    <li><a href="{$APP_URL}web/Index#online_store" title="网上商城">网上商城</a></li>
+                    <li><a href="{$APP_URL}web/Index#Interactive_Marketing" title="互动营销">互动营销</a> </li>
+                    <li><a href="{$APP_URL}web/Index#Brand_Website" title="品牌型网站">品牌型网站</a></li>
+                    <li><a href="{$APP_URL}web/Index#information_network" title="内外信息网">内外信息网</a> </li>
+                    <li style="border-bottom:none;"><a href="{$APP_URL}web/Index#Industry_Portal" title="行业门户">行业门户</a></li>
+                  </ul>
+                </dd>
+              </dl>
+              <dl>
+                <dt>移动应用<span><img src="{$OSS_URL}img/nav_img2.png"></span></dt>
+                <dd>
+                  <ul>
+                    <foreach name='$basic_mobile' id='vo' key='k'>
+                      <li><a href="{$APP_URL}{$vo.url}"  title="{$vo.basic_name}">{$vo.basic_name}</a></li>
+                    </foreach>
+                  </ul>
+                </dd>
+              </dl>
+              <dl>
+                <dt>基础业务<span><img src="{$OSS_URL}img/nav_img3.png"></span></dt>
+                <dd>
+                  <ul>
+                    <foreach name='$basic_Business' id='vo' key='k'>
+                      <li><a href="{$APP_URL}{$vo.url}"  title="{$vo.basic_name}">{$vo.basic_name}</a></li>
+                    </foreach>
+                  </ul>
+                </dd>
+              </dl>
+              <dl style="margin-right:0; border-right:none">
+                <dt>配套产品<span><img src="{$OSS_URL}img/nav_img4.png"></span></dt>
+                <dd>
+                  <ul>
+                    <foreach name='$basic_system' id='vo' key='k'>
+                      <li><a href="{$APP_URL}{$vo.url}"  title="{$vo.basic_name}">{$vo.basic_name}</a></li>
+                    </foreach>
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+          </li>
+          <li><a href="{$APP_URL}Help/VirtualHost">帮助中心</a></li>
+          <li><a href="{$APP_URL}About/Contact">联系我们</a></li>
+        </ul>
+        <div style="left: 0px;" id="buoy"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<script type="text/javascript">
+		current="{$current}";
+    jQuery.nicenav(300, "{$current}");  //滑竿菜单
+</script> 

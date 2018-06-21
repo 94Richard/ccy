@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>单页管理</title>
+<include file="../Common/Common_include.html" />
+</head>
+
+<body>
+
+<div class="place"><span><i class="glyphicon glyphicon-th-list"></i>&nbsp;位置：</span>
+
+  <div class="pull-left">
+    <ul class="placeul">
+      <li><a href="javascript:;">单页列表</a></li>
+    </ul>
+  </div>
+  <div class="pull-right">
+    <a class="btn btn-primary insetBtn" href="{url f='add'}" type="button"><i class="fa fa-pencil"></i>&nbsp;&nbsp;新增</a>
+  </div>
+</div>
+<div class="rightinfo">
+
+<div class="search">
+        <form action="{url do='search'}" method="post">
+            <select id="role" name="search_where[basic_one_id][eq]" class="form-control selectSubmit">
+                <option value="0">--请选择--</option>
+                <foreach name='$parent_list' id='v' }
+                <option value="{$v.basic_sort_id}"
+                <if condition="$search_where.basic_one_id.eq==$v.basic_sort_id">selected="selected"</if>
+                >{$v.basic_sort_name}
+                </option>
+                </foreach>
+            </select>
+            &nbsp;
+            <input type="text" name="search_where[basic_name][like]" size="12" value="{$search_where.uname.like}"
+                   class="form-control searchInput"/>
+            <input type="submit" class="btn btn-primary searchBtn" value="查 询"/>
+           
+        </form>
+    </div>
+    
+    
+  <form action="" method="post" id="form_data_list">
+    <table cellspacing="1"  class="tablelist">
+      <thead>
+
+        <tr class="mylist_title">
+          <th width="28"><input type="checkbox" class="checkbox" onclick="InverSelect();" /></th>
+          <th >ID</th>
+          <th>名称</th>
+          <th>所属分类</th>
+          <th>url指向</th>
+          <th>排序</th>
+          <th>操 作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <foreach name='$list' id='vo'>
+          <tr>
+            <td align="center"><input name="id[]" type="checkbox" value="{$vo.basic_id}" class="checkbox" /></td>
+            <td> {$vo.basic_id}</td>
+            <td dataType="require" class="editTd" data="{$vo.basic_id},basic_name,{url f='update' name='basic_id'},{$id},{$tableName}"> {$vo.basic_name}</td>
+            <td> {$vo.parent}</td>
+            <td dataType="require" class="editTd" data="{$vo.basic_id},url,{url f='update' name='basic_id'},{$id},{$tableName}"> {$vo.url}</td>
+            <td class="editTd" data="{$vo.basic_id},basic_order,{url f='update' name='basic_id'},{$id},{$tableName}">{$vo.basic_order}</td>
+            <td align="center" class="action"><include file="../Common/Common_action.html" /></td>
+          </tr>
+        </foreach>
+      </tbody>
+    </table>
+    <div class="mylist_foot">
+      <include file="../Common/Common_index_bottom.html"/>
+    </div>
+  </form>
+</div>
+<script language="javascript" type="text/javascript">
+  require(['./js/common.js'], function (common) {
+    require(['./js/public/list.js']);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="keywords" content="创驰云网络科技">
+<meta name="description" content="创驰云网络科技">
+<meta name="author" content="创驰云网络科技">
+<title>案例中心_创驰云网络科技</title>
+<link rel="stylesheet" href=".././css/mui.min.css">
+<link rel="stylesheet" type="text/css" href=".././css/app.css" />
+<link rel="stylesheet" type="text/css" href=".././css/style.css" />
+<script src=".././js/mui.min.js"></script>
+<link rel="stylesheet" type="text/css" href=".././css/base.css"/>
+<link rel="stylesheet" type="text/css" href=".././css/pp.css"/>
+<script src=".././js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<include file="../Common/header.html"/>
+
+
+<div class="case">
+
+<div class="wrapper">
+  <ul class="wall">
+  <foreach name="$list" id="vo">
+    <li class="article">
+        <div class='case_img'><a href="{$APP_URL}Case/detail/id/{$vo.case_id}.html"><img src="{$APP_URL}{$vo.case_spic[0]}" alt="{$vo.case_name}"></a></div>
+        <div class='case_title'><a href="{$APP_URL}Case/detail/id/{$vo.case_id}.html">{$vo.case_name}</a></div>
+    </li>
+  </foreach>
+ </ul>
+</div>
+<script src=".././js/jaliswall.js" type="text/javascript" charset="utf-8"></script> 
+<script type="text/javascript">
+		$(function(){
+			$('.wall').jaliswall({ item: '.article' });
+		});
+	</script>
+      
+     
+    </div>
+<div class="pagin"> {$page}</div>
+<include file="../Common/footer.html"/>
+</body>
+</html>
